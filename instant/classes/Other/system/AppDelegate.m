@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "CJMainViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,7 +18,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    CJMainViewController *main = [[CJMainViewController alloc] init];
+    
+    main.view.frame = [UIScreen mainScreen].bounds;
+    
+    main.view.backgroundColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = main;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
