@@ -14,10 +14,18 @@
 		94343B621CECCE720044BBC7 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B4B1CECCE720044BBC7 /* CJMainViewController.m */; };
 		94343B631CECCE720044BBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B551CECCE720044BBC7 /* AppDelegate.m */; };
 		94343B641CECCE720044BBC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B561CECCE720044BBC7 /* main.m */; };
+		94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */; };
+		94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */; };
+		94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC61CF1A50100AD9C68 /* CJTipView.m */; };
+		94430ACB1CF1AB4200AD9C68 /* UIView+CJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */; };
 		944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */; };
 		9444552A1CEEEEC500E7B478 /* CJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455271CEEEEC500E7B478 /* CJBaseTableViewCell.m */; };
 		9444552B1CEEEEC500E7B478 /* CJBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944455281CEEEEC500E7B478 /* CJBaseTableViewCell.xib */; };
 		9444552F1CF029B100E7B478 /* RTDragCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444552E1CF029B100E7B478 /* RTDragCellTableView.m */; };
+		944455381CF0B46300E7B478 /* CJAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455371CF0B46300E7B478 /* CJAllViewController.m */; };
+		9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553A1CF0B46B00E7B478 /* CJMonthViewController.m */; };
+		9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553D1CF0B47400E7B478 /* CJPastViewController.m */; };
+		944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455401CF0B47F00E7B478 /* CJWeekViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		94343B541CECCE720044BBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94343B551CECCE720044BBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94343B561CECCE720044BBC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94430ABF1CF17B7900AD9C68 /* CJMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainScrollView.h; sourceTree = "<group>"; };
+		94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainScrollView.m; sourceTree = "<group>"; };
+		94430AC21CF19EB200AD9C68 /* CJHeaderNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHeaderNavigationView.h; sourceTree = "<group>"; };
+		94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHeaderNavigationView.m; sourceTree = "<group>"; };
+		94430AC51CF1A50100AD9C68 /* CJTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTipView.h; sourceTree = "<group>"; };
+		94430AC61CF1A50100AD9C68 /* CJTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTipView.m; sourceTree = "<group>"; };
+		94430AC91CF1AB4200AD9C68 /* UIView+CJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJFrame.h"; sourceTree = "<group>"; };
+		94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJFrame.m"; sourceTree = "<group>"; };
 		944455221CEEEEC500E7B478 /* CJBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewController.h; sourceTree = "<group>"; };
 		944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseTableViewController.m; sourceTree = "<group>"; };
 		944455261CEEEEC500E7B478 /* CJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -51,6 +67,15 @@
 		944455281CEEEEC500E7B478 /* CJBaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJBaseTableViewCell.xib; sourceTree = "<group>"; };
 		9444552D1CF029B100E7B478 /* RTDragCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTDragCellTableView.h; sourceTree = "<group>"; };
 		9444552E1CF029B100E7B478 /* RTDragCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTDragCellTableView.m; sourceTree = "<group>"; };
+		944455361CF0B46300E7B478 /* CJAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAllViewController.h; sourceTree = "<group>"; };
+		944455371CF0B46300E7B478 /* CJAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAllViewController.m; sourceTree = "<group>"; };
+		944455391CF0B46B00E7B478 /* CJMonthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthViewController.h; sourceTree = "<group>"; };
+		9444553A1CF0B46B00E7B478 /* CJMonthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMonthViewController.m; sourceTree = "<group>"; };
+		9444553C1CF0B47400E7B478 /* CJPastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJPastViewController.h; sourceTree = "<group>"; };
+		9444553D1CF0B47400E7B478 /* CJPastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJPastViewController.m; sourceTree = "<group>"; };
+		9444553F1CF0B47F00E7B478 /* CJWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJWeekViewController.h; sourceTree = "<group>"; };
+		944455401CF0B47F00E7B478 /* CJWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJWeekViewController.m; sourceTree = "<group>"; };
+		944455431CF0B50200E7B478 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,11 +147,11 @@
 			isa = PBXGroup;
 			children = (
 				94343B441CECCE720044BBC7 /* All(全部) */,
-				94343B481CECCE720044BBC7 /* Main(主要) */,
-				94343B4E1CECCE720044BBC7 /* Month(月) */,
-				94343B521CECCE720044BBC7 /* Other */,
-				94343B5A1CECCE720044BBC7 /* Past(过去) */,
 				94343B5E1CECCE720044BBC7 /* Week(周) */,
+				94343B4E1CECCE720044BBC7 /* Month(月) */,
+				94343B5A1CECCE720044BBC7 /* Past(过去) */,
+				94343B481CECCE720044BBC7 /* Main(主要) */,
+				94343B521CECCE720044BBC7 /* Other */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -144,6 +169,8 @@
 		94343B451CECCE720044BBC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				944455361CF0B46300E7B478 /* CJAllViewController.h */,
+				944455371CF0B46300E7B478 /* CJAllViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -191,6 +218,12 @@
 		94343B4D1CECCE720044BBC7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				94430ABF1CF17B7900AD9C68 /* CJMainScrollView.h */,
+				94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */,
+				94430AC21CF19EB200AD9C68 /* CJHeaderNavigationView.h */,
+				94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */,
+				94430AC51CF1A50100AD9C68 /* CJTipView.h */,
+				94430AC61CF1A50100AD9C68 /* CJTipView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -208,6 +241,8 @@
 		94343B4F1CECCE720044BBC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				944455391CF0B46B00E7B478 /* CJMonthViewController.h */,
+				9444553A1CF0B46B00E7B478 /* CJMonthViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -229,6 +264,8 @@
 		94343B521CECCE720044BBC7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				94430AC81CF1AAD900AD9C68 /* delegate */,
+				944455421CF0B4E500E7B478 /* utils */,
 				94343B531CECCE720044BBC7 /* system */,
 				94343B571CECCE720044BBC7 /* template */,
 			);
@@ -269,6 +306,8 @@
 		94343B5B1CECCE720044BBC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				9444553C1CF0B47400E7B478 /* CJPastViewController.h */,
+				9444553D1CF0B47400E7B478 /* CJPastViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -300,6 +339,8 @@
 		94343B5F1CECCE720044BBC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				9444553F1CF0B47F00E7B478 /* CJWeekViewController.h */,
+				944455401CF0B47F00E7B478 /* CJWeekViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -316,6 +357,15 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		94430AC81CF1AAD900AD9C68 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				94430AC91CF1AB4200AD9C68 /* UIView+CJFrame.h */,
+				94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */,
+			);
+			path = delegate;
 			sourceTree = "<group>";
 		};
 		944455211CEEEEC500E7B478 /* controller */ = {
@@ -351,6 +401,14 @@
 				9444552E1CF029B100E7B478 /* RTDragCellTableView.m */,
 			);
 			path = RTDragCellTableView;
+			sourceTree = "<group>";
+		};
+		944455421CF0B4E500E7B478 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				944455431CF0B50200E7B478 /* PrefixHeader.pch */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,11 +516,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				9444552A1CEEEEC500E7B478 /* CJBaseTableViewCell.m in Sources */,
+				944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */,
 				94343B631CECCE720044BBC7 /* AppDelegate.m in Sources */,
 				944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */,
+				94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */,
+				94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */,
 				94343B641CECCE720044BBC7 /* main.m in Sources */,
+				94430ACB1CF1AB4200AD9C68 /* UIView+CJFrame.m in Sources */,
+				9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */,
 				94343B621CECCE720044BBC7 /* CJMainViewController.m in Sources */,
+				94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */,
+				9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */,
 				9444552F1CF029B100E7B478 /* RTDragCellTableView.m in Sources */,
+				944455381CF0B46300E7B478 /* CJAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +654,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = instant/classes/Other/utils/PrefixHeader.pch;
 				INFOPLIST_FILE = instant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;
@@ -599,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = instant/classes/Other/utils/PrefixHeader.pch;
 				INFOPLIST_FILE = instant/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;

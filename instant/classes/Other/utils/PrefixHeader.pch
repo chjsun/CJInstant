@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  instant
+//
+//  Created by chjsun on 16/5/21.
+//  Copyright © 2016年 chjsun. All rights reserved.
+//
+
+#import "UIView+CJFrame.h"
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+#define CJFRAME ([UIScreen mainScreen].bounds)
+#define CJWIDTH ([UIScreen mainScreen].bounds.size.width)
+#define CJHEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#define CJRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1]
+
+#define CJItemHeight CJHEIGHT/6
+
+#define CJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define CJHeaderColor CJColor(78, 12, 114)

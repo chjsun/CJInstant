@@ -10,4 +10,7 @@
 
 @interface CJBaseTableViewController : UITableViewController
 
+/** 数据 */
+@property (nonatomic, strong) NSArray *data;
+
 @end

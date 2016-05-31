@@ -19,11 +19,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = [[UIWindow alloc] initWithFrame:CJFRAME];
     
     CJMainViewController *main = [[CJMainViewController alloc] init];
     
-    main.view.frame = [UIScreen mainScreen].bounds;
+    main.view.frame = CJFRAME;
     
     main.view.backgroundColor = [UIColor whiteColor];
     

@@ -14,32 +14,26 @@
 
 @interface CJBaseTableViewController ()<RTDragCellTableViewDataSource, RTDragCellTableViewDelegate>
 
-/** shujuyuan */
-@property (nonatomic, strong) NSMutableArray *listTeams;
-
 @end
 
 @implementation CJBaseTableViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.tableView = [[RTDragCellTableView alloc] init];
+    [self.tableView setContentInset:UIEdgeInsetsMake(5, 0, 0, 0)];
+    self.tableView.showsVerticalScrollIndicator = NO;
     
     //允许选中行
     self.tableView.allowsSelection = YES;
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-
-    self.navigationItem.title =@"移动单元格";
     
     //设置选中时的样式
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.listTeams =[NSMutableArray arrayWithObjects:@{@"age":@"12"},
-                                                     @{@"age":@"122"},
-                                                     @{@"age":@"11"} , nil];
 }
 
 #pragma mark - Table view data source
@@ -50,8 +44,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return self.listTeams.count;
+    
+    return self.data.count;
 }
 
 
@@ -62,25 +56,25 @@
     // Configure the cell...
     cell.backgroundColor = [UIColor whiteColor];
     
-    cell.data = self.listTeams[indexPath.row];
+    cell.data = self.data[indexPath.row];
     
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    CGSize size = [UIScreen mainScreen].bounds.size;
-    return size.height/6;
+    return CJItemHeight;
 }
+
 
 #pragma mark - datasource
 -(NSArray *)originalArrayDataForTableView:(RTDragCellTableView *)tableView{
-    return self.listTeams;
+    return self.data;
 }
 
 #pragma mark - delegate
 -(void)tableView:(RTDragCellTableView *)tableView newArrayDataForDataSource:(NSArray *)newArray{
-//    self.listTeams = (NSMutableArray *)newArray;
+    self.data = (NSMutableArray *)newArray;
 }
 
 @end

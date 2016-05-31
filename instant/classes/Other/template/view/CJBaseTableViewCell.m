@@ -34,7 +34,11 @@ static NSString * const identifier = @"baseTableViewCell";
 
 -(void)setData:(NSDictionary *)data{
     _data = data;
-    self.eventLabel.text = data[@"age"];
+    self.eventLabel.text = data[@"event"];
+    self.timeLabel.text = data[@"time"];
+    self.describeLabel.text = data[@"desctibe"];
+    self.stateLabel.text = data[@"state"];
+    self.CountdownLabel.text = data[@"countdown"];
 }
 
 +(instancetype)baseCellForTableView:(UITableView *)tableView{
