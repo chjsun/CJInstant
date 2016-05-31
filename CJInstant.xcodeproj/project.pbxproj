@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940A5C7B1CFD709A00D72C35 /* UIView+CJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A5C7A1CFD709A00D72C35 /* UIView+CJFrame.m */; };
 		94343B291CECCDFE0044BBC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94343B271CECCDFE0044BBC7 /* Main.storyboard */; };
 		94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2A1CECCDFE0044BBC7 /* Assets.xcassets */; };
 		94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2C1CECCDFE0044BBC7 /* LaunchScreen.storyboard */; };
@@ -17,7 +18,6 @@
 		94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */; };
 		94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */; };
 		94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC61CF1A50100AD9C68 /* CJTipView.m */; };
-		94430ACB1CF1AB4200AD9C68 /* UIView+CJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */; };
 		944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */; };
 		9444552A1CEEEEC500E7B478 /* CJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455271CEEEEC500E7B478 /* CJBaseTableViewCell.m */; };
 		9444552B1CEEEEC500E7B478 /* CJBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944455281CEEEEC500E7B478 /* CJBaseTableViewCell.xib */; };
@@ -39,12 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		94343B1B1CECCDFE0044BBC7 /* instant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		940A5C791CFD709A00D72C35 /* UIView+CJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJFrame.h"; sourceTree = "<group>"; };
+		940A5C7A1CFD709A00D72C35 /* UIView+CJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJFrame.m"; sourceTree = "<group>"; };
+		94343B1B1CECCDFE0044BBC7 /* CJInstant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJInstant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94343B281CECCDFE0044BBC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94343B2A1CECCDFE0044BBC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94343B2D1CECCDFE0044BBC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94343B2F1CECCDFE0044BBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94343B341CECCDFE0044BBC7 /* instantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instantTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		94343B341CECCDFE0044BBC7 /* CJInstant.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJInstant.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94343B381CECCDFE0044BBC7 /* instantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instantTests.m; sourceTree = "<group>"; };
 		94343B3A1CECCDFE0044BBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94343B4A1CECCE720044BBC7 /* CJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
@@ -58,8 +60,6 @@
 		94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHeaderNavigationView.m; sourceTree = "<group>"; };
 		94430AC51CF1A50100AD9C68 /* CJTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTipView.h; sourceTree = "<group>"; };
 		94430AC61CF1A50100AD9C68 /* CJTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTipView.m; sourceTree = "<group>"; };
-		94430AC91CF1AB4200AD9C68 /* UIView+CJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CJFrame.h"; sourceTree = "<group>"; };
-		94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CJFrame.m"; sourceTree = "<group>"; };
 		944455221CEEEEC500E7B478 /* CJBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewController.h; sourceTree = "<group>"; };
 		944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseTableViewController.m; sourceTree = "<group>"; };
 		944455261CEEEEC500E7B478 /* CJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -96,10 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940A5C781CFD709A00D72C35 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				940A5C791CFD709A00D72C35 /* UIView+CJFrame.h */,
+				940A5C7A1CFD709A00D72C35 /* UIView+CJFrame.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
 		94343B121CECCDFE0044BBC7 = {
 			isa = PBXGroup;
 			children = (
-				94343B1D1CECCDFE0044BBC7 /* instant */,
+				94343B1D1CECCDFE0044BBC7 /* CJInstant */,
 				94343B371CECCDFE0044BBC7 /* instantTests */,
 				94343B1C1CECCDFE0044BBC7 /* Products */,
 			);
@@ -108,13 +117,13 @@
 		94343B1C1CECCDFE0044BBC7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94343B1B1CECCDFE0044BBC7 /* instant.app */,
-				94343B341CECCDFE0044BBC7 /* instantTests.xctest */,
+				94343B1B1CECCDFE0044BBC7 /* CJInstant.app */,
+				94343B341CECCDFE0044BBC7 /* CJInstant.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94343B1D1CECCDFE0044BBC7 /* instant */ = {
+		94343B1D1CECCDFE0044BBC7 /* CJInstant */ = {
 			isa = PBXGroup;
 			children = (
 				94343B431CECCE720044BBC7 /* classes */,
@@ -124,7 +133,7 @@
 				94343B2F1CECCDFE0044BBC7 /* Info.plist */,
 				94343B1E1CECCDFE0044BBC7 /* Supporting Files */,
 			);
-			path = instant;
+			path = CJInstant;
 			sourceTree = "<group>";
 		};
 		94343B1E1CECCDFE0044BBC7 /* Supporting Files */ = {
@@ -264,7 +273,7 @@
 		94343B521CECCE720044BBC7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				94430AC81CF1AAD900AD9C68 /* delegate */,
+				940A5C781CFD709A00D72C35 /* category */,
 				944455421CF0B4E500E7B478 /* utils */,
 				94343B531CECCE720044BBC7 /* system */,
 				94343B571CECCE720044BBC7 /* template */,
@@ -359,15 +368,6 @@
 			path = view;
 			sourceTree = "<group>";
 		};
-		94430AC81CF1AAD900AD9C68 /* delegate */ = {
-			isa = PBXGroup;
-			children = (
-				94430AC91CF1AB4200AD9C68 /* UIView+CJFrame.h */,
-				94430ACA1CF1AB4200AD9C68 /* UIView+CJFrame.m */,
-			);
-			path = delegate;
-			sourceTree = "<group>";
-		};
 		944455211CEEEEC500E7B478 /* controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,9 +414,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94343B1A1CECCDFE0044BBC7 /* instant */ = {
+		94343B1A1CECCDFE0044BBC7 /* CJInstant */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94343B3D1CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "instant" */;
+			buildConfigurationList = 94343B3D1CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "CJInstant" */;
 			buildPhases = (
 				94343B171CECCDFE0044BBC7 /* Sources */,
 				94343B181CECCDFE0044BBC7 /* Frameworks */,
@@ -426,14 +426,14 @@
 			);
 			dependencies = (
 			);
-			name = instant;
+			name = CJInstant;
 			productName = instant;
-			productReference = 94343B1B1CECCDFE0044BBC7 /* instant.app */;
+			productReference = 94343B1B1CECCDFE0044BBC7 /* CJInstant.app */;
 			productType = "com.apple.product-type.application";
 		};
-		94343B331CECCDFE0044BBC7 /* instantTests */ = {
+		94343B331CECCDFE0044BBC7 /* CJInstantTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94343B401CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "instantTests" */;
+			buildConfigurationList = 94343B401CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "CJInstantTests" */;
 			buildPhases = (
 				94343B301CECCDFE0044BBC7 /* Sources */,
 				94343B311CECCDFE0044BBC7 /* Frameworks */,
@@ -444,9 +444,9 @@
 			dependencies = (
 				94343B361CECCDFE0044BBC7 /* PBXTargetDependency */,
 			);
-			name = instantTests;
+			name = CJInstantTests;
 			productName = instantTests;
-			productReference = 94343B341CECCDFE0044BBC7 /* instantTests.xctest */;
+			productReference = 94343B341CECCDFE0044BBC7 /* CJInstant.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -470,7 +470,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 94343B161CECCDFE0044BBC7 /* Build configuration list for PBXProject "instant" */;
+			buildConfigurationList = 94343B161CECCDFE0044BBC7 /* Build configuration list for PBXProject "CJInstant" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -483,8 +483,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94343B1A1CECCDFE0044BBC7 /* instant */,
-				94343B331CECCDFE0044BBC7 /* instantTests */,
+				94343B1A1CECCDFE0044BBC7 /* CJInstant */,
+				94343B331CECCDFE0044BBC7 /* CJInstantTests */,
 			);
 		};
 /* End PBXProject section */
@@ -522,7 +522,7 @@
 				94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */,
 				94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */,
 				94343B641CECCE720044BBC7 /* main.m in Sources */,
-				94430ACB1CF1AB4200AD9C68 /* UIView+CJFrame.m in Sources */,
+				940A5C7B1CFD709A00D72C35 /* UIView+CJFrame.m in Sources */,
 				9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */,
 				94343B621CECCE720044BBC7 /* CJMainViewController.m in Sources */,
 				94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */,
@@ -545,7 +545,7 @@
 /* Begin PBXTargetDependency section */
 		94343B361CECCDFE0044BBC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 94343B1A1CECCDFE0044BBC7 /* instant */;
+			target = 94343B1A1CECCDFE0044BBC7 /* CJInstant */;
 			targetProxy = 94343B351CECCDFE0044BBC7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -654,11 +654,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = instant/classes/Other/utils/PrefixHeader.pch;
-				INFOPLIST_FILE = instant/Info.plist;
+				GCC_PREFIX_HEADER = CJInstant/classes/Other/utils/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/CJInstant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJInstant;
 			};
 			name = Debug;
 		};
@@ -666,11 +666,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = instant/classes/Other/utils/PrefixHeader.pch;
-				INFOPLIST_FILE = instant/Info.plist;
+				GCC_PREFIX_HEADER = CJInstant/classes/Other/utils/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/CJInstant/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CJInstant;
 			};
 			name = Release;
 		};
@@ -681,8 +681,8 @@
 				INFOPLIST_FILE = instantTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instantTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instant.app/instant";
+				PRODUCT_NAME = CJInstant;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJInstant.app/CJInstant";
 			};
 			name = Debug;
 		};
@@ -693,15 +693,15 @@
 				INFOPLIST_FILE = instantTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instantTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instant.app/instant";
+				PRODUCT_NAME = CJInstant;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJInstant.app/CJInstant";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		94343B161CECCDFE0044BBC7 /* Build configuration list for PBXProject "instant" */ = {
+		94343B161CECCDFE0044BBC7 /* Build configuration list for PBXProject "CJInstant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94343B3B1CECCDFE0044BBC7 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94343B3D1CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "instant" */ = {
+		94343B3D1CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "CJInstant" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94343B3E1CECCDFE0044BBC7 /* Debug */,
@@ -719,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94343B401CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "instantTests" */ = {
+		94343B401CECCDFE0044BBC7 /* Build configuration list for PBXNativeTarget "CJInstantTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94343B411CECCDFE0044BBC7 /* Debug */,

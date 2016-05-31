@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "94343B1A1CECCDFE0044BBC7"
-               BuildableName = "instant.app"
-               BlueprintName = "instant"
-               ReferencedContainer = "container:instant.xcodeproj">
+               BuildableName = "CJInstant.app"
+               BlueprintName = "CJInstant"
+               ReferencedContainer = "container:CJInstant.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "94343B331CECCDFE0044BBC7"
-               BuildableName = "instantTests.xctest"
-               BlueprintName = "instantTests"
-               ReferencedContainer = "container:instant.xcodeproj">
+               BuildableName = "CJInstant.xctest"
+               BlueprintName = "CJInstantTests"
+               ReferencedContainer = "container:CJInstant.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "94343B1A1CECCDFE0044BBC7"
-            BuildableName = "instant.app"
-            BlueprintName = "instant"
-            ReferencedContainer = "container:instant.xcodeproj">
+            BuildableName = "CJInstant.app"
+            BlueprintName = "CJInstant"
+            ReferencedContainer = "container:CJInstant.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "94343B1A1CECCDFE0044BBC7"
-            BuildableName = "instant.app"
-            BlueprintName = "instant"
-            ReferencedContainer = "container:instant.xcodeproj">
+            BuildableName = "CJInstant.app"
+            BlueprintName = "CJInstant"
+            ReferencedContainer = "container:CJInstant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "94343B1A1CECCDFE0044BBC7"
-            BuildableName = "instant.app"
-            BlueprintName = "instant"
-            ReferencedContainer = "container:instant.xcodeproj">
+            BuildableName = "CJInstant.app"
+            BlueprintName = "CJInstant"
+            ReferencedContainer = "container:CJInstant.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

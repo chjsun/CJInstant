@@ -100,7 +100,7 @@
     
     tipView.backgroundColor = CJHeaderColor;
 
-    [tipView setTipForTitle:@"世间三" time:@"2016年5月28日" dayNumber:@"30748"];
+    [tipView setTipForTitle:@"世间三世间三世间三世间三世间三世间三世间三" time:@"2016年5月28日" dayNumber:@"30748"];
     
     [self.view addSubview:tipView];
     

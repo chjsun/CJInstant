@@ -33,6 +33,7 @@
         self.data = data;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"all");
 }
