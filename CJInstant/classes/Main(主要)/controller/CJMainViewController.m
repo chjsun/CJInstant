@@ -9,6 +9,7 @@
 #import "CJMainViewController.h"
 
 #import "CJBaseTableViewController.h"
+#import "CJAddViewController.h"
 
 #import "CJMainScrollView.h"
 #import "CJHeaderNavigationView.h"
@@ -16,7 +17,7 @@
 
 #define onlyValue 78
 
-@interface CJMainViewController ()<UIScrollViewDelegate, HeaderNavitationTelegate>
+@interface CJMainViewController ()<UIScrollViewDelegate, HeaderNavitationDelegate>
 
 /** scroll */
 @property (nonatomic, weak) CJMainScrollView *scrollView;
@@ -34,13 +35,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setUpNavitation];
-    
     [self setUpTip];
     
     [self setUpAllController];
     
-
+    [self setUpNavitation];
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSLog(@"%@", path);
 }
 
 #pragma mark - 设置头部导航栏
@@ -100,7 +102,7 @@
     
     tipView.backgroundColor = CJHeaderColor;
 
-    [tipView setTipForTitle:@"世间三世间三世间三世间三世间三世间三世间三" time:@"2016年5月28日" dayNumber:@"30748"];
+    [tipView setTipForTitle:@"世间三世间三世间三世间三世间三世间三世间三" time:@"2016年5月28日" dayNumber:@"48"];
     
     [self.view addSubview:tipView];
     
@@ -130,6 +132,14 @@
 #pragma mark - 顶部按钮的代理方法
 -(void)HeaderNavitation:(CJHeaderNavigationView *)headerView didSelectButton:(UIButton *)btn{
     [self switchControl:btn];
+}
+
+// 点击＋按钮调用
+-(void)HeaderNavitation:(CJHeaderNavigationView *)headerView didSelectAdd:(UIButton *)btn{
+    
+    CJAddViewController *addController = [[CJAddViewController alloc] init];
+//    addController.deleteHidden = YES;
+    [self presentViewController:addController animated:YES completion:nil];
 }
 
 #pragma mark - scrollView delegate

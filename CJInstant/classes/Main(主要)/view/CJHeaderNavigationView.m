@@ -14,6 +14,8 @@
 
 /** 标签计数器 */
 @property (nonatomic, assign) CGFloat btnCount;
+/** 设置按钮弹出的界面 */
+@property (nonatomic, weak) UIButton *addView;
 
 @end
 
@@ -48,14 +50,19 @@
     btn1.selected = YES;
     self.selectButton = btn1;
     
-    UIButton *btn2 = [[UIButton alloc] init];
-    [self setUpButton:btn2 title:@"周"];
+    UIButton *btnWeek = [[UIButton alloc] init];
+    [self setUpButton:btnWeek title:@"周"];
     
-    UIButton *btn3 = [[UIButton alloc] init];
-    [self setUpButton:btn3 title:@"月"];
+    UIButton *btnMonth = [[UIButton alloc] init];
+    [self setUpButton:btnMonth title:@"月"];
     
-    UIButton *btn4 = [[UIButton alloc] init];
-    [self setUpButton:btn4 title:@"昔"];
+    UIButton *btnOld = [[UIButton alloc] init];
+    [self setUpButton:btnOld title:@"昔"];
+    
+    UIButton *btnAdd = [[UIButton alloc] init];
+    self.addView = btnAdd;
+    [self setupButtonAdd:btnAdd];
+    
     
     [self addSubview:self.selectStatView];
     
@@ -85,6 +92,22 @@
     [self addSubview:btn];
     self.btnCount += 1;
 }
+
+-(void) setupButtonAdd:(UIButton *)button{
+    
+    [button setImage:[UIImage imageNamed:@"ic_add_white"] forState:UIControlStateNormal];
+    button.frame = CGRectMake(CJWIDTH - CJItemHeight/2, 20, 44, 44);
+    [button addTarget:self action:@selector(addCleck:) forControlEvents:UIControlEventTouchDown];
+    [self addSubview:button];
+}
+
+-(void) addCleck:(UIButton *)button{
+    if ([self.delegate respondsToSelector:@selector(HeaderNavitation:didSelectAdd:)]) {
+        [self.delegate HeaderNavitation:self didSelectAdd:button];
+    }
+    
+}
+
 
 /**
  *  按钮点击事件

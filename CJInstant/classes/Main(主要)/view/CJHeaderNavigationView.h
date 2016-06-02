@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class CJHeaderNavigationView;
-@protocol HeaderNavitationTelegate <NSObject>
+@protocol HeaderNavitationDelegate <NSObject>
 
 @optional
 -(void) HeaderNavitation:(CJHeaderNavigationView *)headerView didSelectButton:(UIButton *)btn;
+-(void) HeaderNavitation:(CJHeaderNavigationView *)headerView didSelectAdd:(UIButton *)btn;
 
 @end
 
@@ -24,7 +25,7 @@
 @property (nonatomic, strong) UIView *selectStatView;
 
 /** 代理 */
-@property (nonatomic, strong) id<HeaderNavitationTelegate> delegate;
+@property (nonatomic, assign) id<HeaderNavitationDelegate> delegate;
 
 
 -(void) setUpNavitation;

@@ -39,7 +39,9 @@ static NSString *testString = @"测试用标准字符串";
         
         label.x = leftX;
         label.y = CJItemHeight/2 - textHeight - spacing;
-        
+        label.width = CJWIDTH/2 - leftX;
+        label.height = leftTextSize;
+
         _titleLabel = label;
        
         [self addSubview:label];
@@ -56,6 +58,8 @@ static NSString *testString = @"测试用标准字符串";
         
         label.x = leftX;
         label.y = CJItemHeight/2 + spacing;
+        label.width = CJWIDTH/2 - leftX;
+        label.height = leftTextSize;
         _timeLabel = label;
        
         [self addSubview:label];
@@ -70,11 +74,13 @@ static NSString *testString = @"测试用标准字符串";
         label.textColor = [UIColor whiteColor];
         label.font = [UIFont systemFontOfSize:rightTextSize];
         CGSize textSize = [self heightForString:@"12345" fontSize:rightTextSize];
+        label.textAlignment =NSTextAlignmentRight;
 
         label.x = CJWIDTH - textSize.width - CJItemHeight/2;
-        label.y = CJItemHeight/2  - textSize.height/2;
+        label.y = 0;
+        label.width = CJWIDTH/2 - CJItemHeight/2;
+        label.height = CJItemHeight;
         _dayNumberLabel = label;
-        
         [self addSubview:label];
         
     }
@@ -91,6 +97,9 @@ static NSString *testString = @"测试用标准字符串";
         
         label.x = CJWIDTH - CJItemHeight/2 + textSize.width;
         label.y = self.timeLabel.y;
+        label.width = textSize.width;
+        label.height = textSize.height;
+
         _company = label;
         [self addSubview:label];
         
@@ -103,15 +112,10 @@ static NSString *testString = @"测试用标准字符串";
 -(void)setTipForTitle:(NSString *)title time:(NSString *)time dayNumber:(NSString *)dayNumber{
 
     self.titleLabel.text = title;
-    [self.titleLabel sizeToFit];
-    
     self.timeLabel.text = time;
-    [self.timeLabel sizeToFit];
-    
     self.dayNumberLabel.text = dayNumber;
-    [self.dayNumberLabel sizeToFit];
-    
-    [self.company sizeToFit];
+    [self company];
+//    [self.company sizeToFit];
     
 }
 

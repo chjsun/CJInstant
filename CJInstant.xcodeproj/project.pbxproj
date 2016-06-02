@@ -12,12 +12,8 @@
 		94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2A1CECCDFE0044BBC7 /* Assets.xcassets */; };
 		94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2C1CECCDFE0044BBC7 /* LaunchScreen.storyboard */; };
 		94343B391CECCDFE0044BBC7 /* instantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B381CECCDFE0044BBC7 /* instantTests.m */; };
-		94343B621CECCE720044BBC7 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B4B1CECCE720044BBC7 /* CJMainViewController.m */; };
 		94343B631CECCE720044BBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B551CECCE720044BBC7 /* AppDelegate.m */; };
 		94343B641CECCE720044BBC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B561CECCE720044BBC7 /* main.m */; };
-		94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */; };
-		94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */; };
-		94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94430AC61CF1A50100AD9C68 /* CJTipView.m */; };
 		944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */; };
 		9444552A1CEEEEC500E7B478 /* CJBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455271CEEEEC500E7B478 /* CJBaseTableViewCell.m */; };
 		9444552B1CEEEEC500E7B478 /* CJBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 944455281CEEEEC500E7B478 /* CJBaseTableViewCell.xib */; };
@@ -26,6 +22,25 @@
 		9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553A1CF0B46B00E7B478 /* CJMonthViewController.m */; };
 		9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553D1CF0B47400E7B478 /* CJPastViewController.m */; };
 		944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455401CF0B47F00E7B478 /* CJWeekViewController.m */; };
+		9468B8061CFFFE6300F3D442 /* CJCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */; };
+		9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F51CFFFE6300F3D442 /* CJMonthDayViewController.m */; };
+		9468B8081CFFFE6300F3D442 /* CJYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F71CFFFE6300F3D442 /* CJYearViewController.m */; };
+		9468B8091CFFFE6300F3D442 /* CJUseTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7FB1CFFFE6300F3D442 /* CJUseTime.m */; };
+		9468B80A1CFFFE6300F3D442 /* CJDecisionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7FE1CFFFE6300F3D442 /* CJDecisionView.m */; };
+		9468B80B1CFFFE6300F3D442 /* CJMonthDayCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8001CFFFE6300F3D442 /* CJMonthDayCollectionCell.m */; };
+		9468B80C1CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9468B8011CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib */; };
+		9468B80D1CFFFE6300F3D442 /* CJSelectTimeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8031CFFFE6300F3D442 /* CJSelectTimeScrollView.m */; };
+		9468B80E1CFFFE6300F3D442 /* CJShowTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8051CFFFE6300F3D442 /* CJShowTimeView.m */; };
+		9468B8151CFFFEAF00F3D442 /* CJHeaderNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8101CFFFEAF00F3D442 /* CJHeaderNavigationView.m */; };
+		9468B8161CFFFEAF00F3D442 /* CJMainScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8121CFFFEAF00F3D442 /* CJMainScrollView.m */; };
+		9468B8171CFFFEAF00F3D442 /* CJTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8141CFFFEAF00F3D442 /* CJTipView.m */; };
+		9468B81D1CFFFEBC00F3D442 /* CJAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8191CFFFEBC00F3D442 /* CJAddViewController.m */; };
+		9468B81E1CFFFEBC00F3D442 /* CJAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9468B81A1CFFFEBC00F3D442 /* CJAddViewController.xib */; };
+		9468B81F1CFFFEBC00F3D442 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */; };
+		9468B8291CFFFECB00F3D442 /* CJCoreDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */; };
+		9468B82A1CFFFECB00F3D442 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */; };
+		9468B82B1CFFFECB00F3D442 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8261CFFFECB00F3D442 /* Event.m */; };
+		9468B82C1CFFFECB00F3D442 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,17 +64,9 @@
 		94343B341CECCDFE0044BBC7 /* CJInstant.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJInstant.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94343B381CECCDFE0044BBC7 /* instantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instantTests.m; sourceTree = "<group>"; };
 		94343B3A1CECCDFE0044BBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94343B4A1CECCE720044BBC7 /* CJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
-		94343B4B1CECCE720044BBC7 /* CJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
 		94343B541CECCE720044BBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94343B551CECCE720044BBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		94343B561CECCE720044BBC7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		94430ABF1CF17B7900AD9C68 /* CJMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainScrollView.h; sourceTree = "<group>"; };
-		94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainScrollView.m; sourceTree = "<group>"; };
-		94430AC21CF19EB200AD9C68 /* CJHeaderNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHeaderNavigationView.h; sourceTree = "<group>"; };
-		94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHeaderNavigationView.m; sourceTree = "<group>"; };
-		94430AC51CF1A50100AD9C68 /* CJTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTipView.h; sourceTree = "<group>"; };
-		94430AC61CF1A50100AD9C68 /* CJTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTipView.m; sourceTree = "<group>"; };
 		944455221CEEEEC500E7B478 /* CJBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewController.h; sourceTree = "<group>"; };
 		944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBaseTableViewController.m; sourceTree = "<group>"; };
 		944455261CEEEEC500E7B478 /* CJBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBaseTableViewCell.h; sourceTree = "<group>"; };
@@ -76,6 +83,41 @@
 		9444553F1CF0B47F00E7B478 /* CJWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJWeekViewController.h; sourceTree = "<group>"; };
 		944455401CF0B47F00E7B478 /* CJWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJWeekViewController.m; sourceTree = "<group>"; };
 		944455431CF0B50200E7B478 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		9468B7F21CFFFE6300F3D442 /* CJCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCalendarViewController.h; sourceTree = "<group>"; };
+		9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCalendarViewController.m; sourceTree = "<group>"; };
+		9468B7F41CFFFE6300F3D442 /* CJMonthDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthDayViewController.h; sourceTree = "<group>"; };
+		9468B7F51CFFFE6300F3D442 /* CJMonthDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMonthDayViewController.m; sourceTree = "<group>"; };
+		9468B7F61CFFFE6300F3D442 /* CJYearViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJYearViewController.h; sourceTree = "<group>"; };
+		9468B7F71CFFFE6300F3D442 /* CJYearViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJYearViewController.m; sourceTree = "<group>"; };
+		9468B7FA1CFFFE6300F3D442 /* CJUseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJUseTime.h; sourceTree = "<group>"; };
+		9468B7FB1CFFFE6300F3D442 /* CJUseTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJUseTime.m; sourceTree = "<group>"; };
+		9468B7FD1CFFFE6300F3D442 /* CJDecisionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDecisionView.h; sourceTree = "<group>"; };
+		9468B7FE1CFFFE6300F3D442 /* CJDecisionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDecisionView.m; sourceTree = "<group>"; };
+		9468B7FF1CFFFE6300F3D442 /* CJMonthDayCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthDayCollectionCell.h; sourceTree = "<group>"; };
+		9468B8001CFFFE6300F3D442 /* CJMonthDayCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMonthDayCollectionCell.m; sourceTree = "<group>"; };
+		9468B8011CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJMonthDayCollectionCell.xib; sourceTree = "<group>"; };
+		9468B8021CFFFE6300F3D442 /* CJSelectTimeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSelectTimeScrollView.h; sourceTree = "<group>"; };
+		9468B8031CFFFE6300F3D442 /* CJSelectTimeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSelectTimeScrollView.m; sourceTree = "<group>"; };
+		9468B8041CFFFE6300F3D442 /* CJShowTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJShowTimeView.h; sourceTree = "<group>"; };
+		9468B8051CFFFE6300F3D442 /* CJShowTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJShowTimeView.m; sourceTree = "<group>"; };
+		9468B80F1CFFFEAF00F3D442 /* CJHeaderNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJHeaderNavigationView.h; sourceTree = "<group>"; };
+		9468B8101CFFFEAF00F3D442 /* CJHeaderNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJHeaderNavigationView.m; sourceTree = "<group>"; };
+		9468B8111CFFFEAF00F3D442 /* CJMainScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainScrollView.h; sourceTree = "<group>"; };
+		9468B8121CFFFEAF00F3D442 /* CJMainScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainScrollView.m; sourceTree = "<group>"; };
+		9468B8131CFFFEAF00F3D442 /* CJTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTipView.h; sourceTree = "<group>"; };
+		9468B8141CFFFEAF00F3D442 /* CJTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTipView.m; sourceTree = "<group>"; };
+		9468B8181CFFFEBC00F3D442 /* CJAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJAddViewController.h; sourceTree = "<group>"; };
+		9468B8191CFFFEBC00F3D442 /* CJAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJAddViewController.m; sourceTree = "<group>"; };
+		9468B81A1CFFFEBC00F3D442 /* CJAddViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJAddViewController.xib; sourceTree = "<group>"; };
+		9468B81B1CFFFEBC00F3D442 /* CJMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMainViewController.h; sourceTree = "<group>"; };
+		9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
+		9468B8211CFFFECB00F3D442 /* CJCoreDataManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCoreDataManage.h; sourceTree = "<group>"; };
+		9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCoreDataManage.m; sourceTree = "<group>"; };
+		9468B8231CFFFECB00F3D442 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		9468B8251CFFFECB00F3D442 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		9468B8261CFFFECB00F3D442 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		9468B8281CFFFECB00F3D442 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +197,7 @@
 		94343B431CECCE720044BBC7 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				9468B7F01CFFFE6300F3D442 /* calendar */,
 				94343B441CECCE720044BBC7 /* All(全部) */,
 				94343B5E1CECCE720044BBC7 /* Week(周) */,
 				94343B4E1CECCE720044BBC7 /* Month(月) */,
@@ -211,8 +254,11 @@
 		94343B491CECCE720044BBC7 /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				94343B4A1CECCE720044BBC7 /* CJMainViewController.h */,
-				94343B4B1CECCE720044BBC7 /* CJMainViewController.m */,
+				9468B8181CFFFEBC00F3D442 /* CJAddViewController.h */,
+				9468B8191CFFFEBC00F3D442 /* CJAddViewController.m */,
+				9468B81A1CFFFEBC00F3D442 /* CJAddViewController.xib */,
+				9468B81B1CFFFEBC00F3D442 /* CJMainViewController.h */,
+				9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -227,12 +273,12 @@
 		94343B4D1CECCE720044BBC7 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				94430ABF1CF17B7900AD9C68 /* CJMainScrollView.h */,
-				94430AC01CF17B7900AD9C68 /* CJMainScrollView.m */,
-				94430AC21CF19EB200AD9C68 /* CJHeaderNavigationView.h */,
-				94430AC31CF19EB200AD9C68 /* CJHeaderNavigationView.m */,
-				94430AC51CF1A50100AD9C68 /* CJTipView.h */,
-				94430AC61CF1A50100AD9C68 /* CJTipView.m */,
+				9468B80F1CFFFEAF00F3D442 /* CJHeaderNavigationView.h */,
+				9468B8101CFFFEAF00F3D442 /* CJHeaderNavigationView.m */,
+				9468B8111CFFFEAF00F3D442 /* CJMainScrollView.h */,
+				9468B8121CFFFEAF00F3D442 /* CJMainScrollView.m */,
+				9468B8131CFFFEAF00F3D442 /* CJTipView.h */,
+				9468B8141CFFFEAF00F3D442 /* CJTipView.m */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -273,6 +319,7 @@
 		94343B521CECCE720044BBC7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				9468B8201CFFFECB00F3D442 /* sql */,
 				940A5C781CFD709A00D72C35 /* category */,
 				944455421CF0B4E500E7B478 /* utils */,
 				94343B531CECCE720044BBC7 /* system */,
@@ -411,6 +458,76 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		9468B7F01CFFFE6300F3D442 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9468B7F11CFFFE6300F3D442 /* controller */,
+				9468B7F81CFFFE6300F3D442 /* model */,
+				9468B7F91CFFFE6300F3D442 /* service */,
+				9468B7FC1CFFFE6300F3D442 /* view */,
+			);
+			path = calendar;
+			sourceTree = "<group>";
+		};
+		9468B7F11CFFFE6300F3D442 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				9468B7F21CFFFE6300F3D442 /* CJCalendarViewController.h */,
+				9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */,
+				9468B7F41CFFFE6300F3D442 /* CJMonthDayViewController.h */,
+				9468B7F51CFFFE6300F3D442 /* CJMonthDayViewController.m */,
+				9468B7F61CFFFE6300F3D442 /* CJYearViewController.h */,
+				9468B7F71CFFFE6300F3D442 /* CJYearViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		9468B7F81CFFFE6300F3D442 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		9468B7F91CFFFE6300F3D442 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				9468B7FA1CFFFE6300F3D442 /* CJUseTime.h */,
+				9468B7FB1CFFFE6300F3D442 /* CJUseTime.m */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		9468B7FC1CFFFE6300F3D442 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				9468B7FD1CFFFE6300F3D442 /* CJDecisionView.h */,
+				9468B7FE1CFFFE6300F3D442 /* CJDecisionView.m */,
+				9468B7FF1CFFFE6300F3D442 /* CJMonthDayCollectionCell.h */,
+				9468B8001CFFFE6300F3D442 /* CJMonthDayCollectionCell.m */,
+				9468B8011CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib */,
+				9468B8021CFFFE6300F3D442 /* CJSelectTimeScrollView.h */,
+				9468B8031CFFFE6300F3D442 /* CJSelectTimeScrollView.m */,
+				9468B8041CFFFE6300F3D442 /* CJShowTimeView.h */,
+				9468B8051CFFFE6300F3D442 /* CJShowTimeView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		9468B8201CFFFECB00F3D442 /* sql */ = {
+			isa = PBXGroup;
+			children = (
+				9468B8211CFFFECB00F3D442 /* CJCoreDataManage.h */,
+				9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */,
+				9468B8231CFFFECB00F3D442 /* Event+CoreDataProperties.h */,
+				9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */,
+				9468B8251CFFFECB00F3D442 /* Event.h */,
+				9468B8261CFFFECB00F3D442 /* Event.m */,
+				9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */,
+			);
+			path = sql;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -495,9 +612,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */,
+				9468B80C1CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib in Resources */,
 				94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */,
 				94343B291CECCDFE0044BBC7 /* Main.storyboard in Resources */,
 				9444552B1CEEEEC500E7B478 /* CJBaseTableViewCell.xib in Resources */,
+				9468B81E1CFFFEBC00F3D442 /* CJAddViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,15 +638,28 @@
 				944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */,
 				94343B631CECCE720044BBC7 /* AppDelegate.m in Sources */,
 				944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */,
-				94430AC71CF1A50100AD9C68 /* CJTipView.m in Sources */,
-				94430AC41CF19EB200AD9C68 /* CJHeaderNavigationView.m in Sources */,
+				9468B80E1CFFFE6300F3D442 /* CJShowTimeView.m in Sources */,
+				9468B82C1CFFFECB00F3D442 /* Model.xcdatamodeld in Sources */,
+				9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */,
 				94343B641CECCE720044BBC7 /* main.m in Sources */,
+				9468B81D1CFFFEBC00F3D442 /* CJAddViewController.m in Sources */,
 				940A5C7B1CFD709A00D72C35 /* UIView+CJFrame.m in Sources */,
+				9468B82A1CFFFECB00F3D442 /* Event+CoreDataProperties.m in Sources */,
+				9468B8091CFFFE6300F3D442 /* CJUseTime.m in Sources */,
+				9468B8171CFFFEAF00F3D442 /* CJTipView.m in Sources */,
+				9468B80A1CFFFE6300F3D442 /* CJDecisionView.m in Sources */,
 				9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */,
-				94343B621CECCE720044BBC7 /* CJMainViewController.m in Sources */,
-				94430AC11CF17B7900AD9C68 /* CJMainScrollView.m in Sources */,
+				9468B8061CFFFE6300F3D442 /* CJCalendarViewController.m in Sources */,
+				9468B80B1CFFFE6300F3D442 /* CJMonthDayCollectionCell.m in Sources */,
+				9468B82B1CFFFECB00F3D442 /* Event.m in Sources */,
 				9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */,
+				9468B80D1CFFFE6300F3D442 /* CJSelectTimeScrollView.m in Sources */,
+				9468B8081CFFFE6300F3D442 /* CJYearViewController.m in Sources */,
+				9468B81F1CFFFEBC00F3D442 /* CJMainViewController.m in Sources */,
 				9444552F1CF029B100E7B478 /* RTDragCellTableView.m in Sources */,
+				9468B8161CFFFEAF00F3D442 /* CJMainScrollView.m in Sources */,
+				9468B8151CFFFEAF00F3D442 /* CJHeaderNavigationView.m in Sources */,
+				9468B8291CFFFECB00F3D442 /* CJCoreDataManage.m in Sources */,
 				944455381CF0B46300E7B478 /* CJAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -656,6 +788,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = CJInstant/classes/Other/utils/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/CJInstant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;
 				PRODUCT_NAME = CJInstant;
@@ -668,6 +801,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = CJInstant/classes/Other/utils/PrefixHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/CJInstant/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chjsun.instant;
 				PRODUCT_NAME = CJInstant;
@@ -729,6 +863,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9468B8281CFFFECB00F3D442 /* Model.xcdatamodel */,
+			);
+			currentVersion = 9468B8281CFFFECB00F3D442 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 94343B131CECCDFE0044BBC7 /* Project object */;
 }
