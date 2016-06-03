@@ -13,8 +13,9 @@
 #import "CJCell.h"
 
 #import "CJBaseTableViewCell.h"
+#import "CJAddViewController.h"
 
-@interface CJAllViewController ()
+@interface CJAllViewController ()<addViewControllerDelegate>
 /** 时间处理 */
 @property (nonatomic, strong) CJUseTime *usetime;
 @end
@@ -71,19 +72,26 @@
         cell.state = state;
         cell.countdown = [NSString stringWithFormat:@"%ld天", labs(seconds)];
         cell.color = e.color;
+        cell.ids = [NSString stringWithFormat:@"%@",e.ids];
         
         [data addObject:cell];
     }
     self.data = data;
 }
 
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-   
     CJBaseTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    CJCell *cjcell = cell.cell;
-
     
-}
+    CJAddViewController *addControl = [[CJAddViewController alloc] init];
+    addControl.delegate = self;
+    addControl.cjcell = cell.cell;
+    [self presentViewController:addControl animated:YES completion:nil];
+    // 该操作只是唤醒主线程立即操作 presentViewController: animated: completion， 弹出控制器
+    // 可以什么都不做
+    [self performSelector:@selector(dontSleep) onThread:[NSThread mainThread] withObject:nil waitUntilDone:nil];
 
+}
+-(void) dontSleep{}
 
 @end

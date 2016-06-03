@@ -181,7 +181,7 @@
 -(void)HeaderNavitation:(CJHeaderNavigationView *)headerView didSelectAdd:(UIButton *)btn{
     
     CJAddViewController *addController = [[CJAddViewController alloc] init];
-//    addController.deleteHidden = YES;
+    addController.deleteHidden = YES;
     addController.delegate = self;
     [self presentViewController:addController animated:YES completion:nil];
 }

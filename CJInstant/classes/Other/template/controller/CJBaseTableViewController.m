@@ -11,10 +11,11 @@
 #import "CJBaseTableViewCell.h"
 #import "CJUseTime.h"
 #import "CJCell.h"
+#import "CJAddViewController.h"
 
 #import "RTDragCellTableView.h"
 
-@interface CJBaseTableViewController ()<RTDragCellTableViewDataSource, RTDragCellTableViewDelegate>
+@interface CJBaseTableViewController ()<RTDragCellTableViewDataSource, RTDragCellTableViewDelegate, addViewControllerDelegate>
 /** 时间处理 */
 @property (nonatomic, strong) CJUseTime *usetime;
 @end
@@ -68,6 +69,14 @@
     return CJItemHeight;
 }
 
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    CJAddViewController *addControl = [[CJAddViewController alloc] init];
+//    addControl.delegate = self;
+//    
+//    [self presentViewController:addControl animated:YES completion:nil];
+//    NSLog(@"ssss");
+//
+//}
 
 #pragma mark - datasource
 -(NSArray *)originalArrayDataForTableView:(RTDragCellTableView *)tableView{

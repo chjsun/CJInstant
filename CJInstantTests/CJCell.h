@@ -28,4 +28,6 @@
 @property (nonatomic, copy) NSString *countdown;
 /** 颜色 */
 @property (nonatomic, copy) NSString *color;
+/** 唯一标示 */
+@property (nonatomic, copy) NSString *ids;
 @end

@@ -15,6 +15,7 @@
 #import "CJUseTime.h"
 #import "CJCoreDataManage.h"
 #import "Event.h"
+#import "CJCell.h"
 
 @interface CJAddViewController ()<CalendarViewControllerDelegate, ColorPlateDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *eventTextLabel;
@@ -36,13 +37,16 @@
 @property (nonatomic, weak) CJCalendarViewController *calendar;
 /** 时间处理 */
 @property (nonatomic, strong) CJUseTime *usetime;
+/** 所有颜色 */
+@property (nonatomic, strong) NSDictionary *dictColor;
+
 @end
 
 @implementation CJAddViewController
 
 -(instancetype)init{
     self = [super init];
-
+    
     if (self) {
         self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }
@@ -56,6 +60,19 @@
     return _usetime;
 }
 
+-(NSDictionary *)dictColor{
+    if (!_dictColor) {
+        _dictColor = @{@"purpleColor": [UIColor purpleColor],
+                       @"redColor": [UIColor redColor],
+                       @"MidNightColor":CJColor(9, 21, 128),
+                       @"greenColor":[UIColor greenColor],
+                       @"blueColor":[UIColor blueColor],
+                       @"blackColor":[UIColor blackColor]
+                       };
+        
+    }
+    return _dictColor;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -138,18 +155,19 @@
     
     if ([eventTabel isEqualToString:@""]) {
         self.eventTextLabel.placeholder = @"请输入事件名";
-
         [UIView animateWithDuration:0.25 animations:^{
             // 动画变小
             _eventStateButton.transform = CGAffineTransformMakeScale(0.7, 0.7);
-            
+
         }completion:^(BOOL finished) {
             // 变小之后弹性回归
             [UIView animateWithDuration:0.8 delay:0 usingSpringWithDamping:0.2
                   initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                 _eventStateButton.transform = CGAffineTransformIdentity;
                 
-            } completion:nil];
+                  } completion:^(BOOL finished) {
+                      return;
+                  }];
         }];
     }else if([detailTabel isEqualToString:@""]) {
         self.detailTextLabel.placeholder = @"请输入详细信息";
@@ -164,7 +182,9 @@
                   initialSpringVelocity:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                       _detailStateButton.transform = CGAffineTransformIdentity;
                       
-                  } completion:nil];
+                  } completion:^(BOOL finished) {
+                      return;
+                  }];
         }];
     
     }else{
@@ -191,15 +211,23 @@
             
             NSLog(@"保存失败－－%@", [error localizedDescription]);
         }
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
     
     // delegate
     if ([self.delegate respondsToSelector:@selector(addViewController:didSelectActionBtn:)]) {
         [self.delegate addViewController:self didSelectActionBtn:sender];
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+-(void)setCjcell:(CJCell *)cjcell{
+    _cjcell = cjcell;
+    
+    self.eventTextLabel.text = cjcell.event;
+    self.detailTextLabel.text = cjcell.detail;
+    [self.datetimeButton setTitle:cjcell.datetime forState:UIControlStateNormal];
+    self.colorButton.backgroundColor = self.dictColor[cjcell.color];
+}
 
 #pragma mark - 日历控制器代理
 -(void)CalendarViewController:(CJCalendarViewController *)controller didSelectActionYear:(NSString *)year month:(NSString *)month day:(NSString *)day{
@@ -218,6 +246,9 @@
     [self.colorButton setTitle:name forState:UIControlStateNormal];
 }
 
+-(void)dealloc{
+    NSLog(@"addcontroller dealloc___%s", __func__);
+}
 
 
 @end
