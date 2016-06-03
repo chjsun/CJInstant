@@ -8,17 +8,19 @@
 
 #import "CJAddViewController.h"
 
-#import "CJUseTime.h"
-
 #import "CJCalendarViewController.h"
 
+#import "CJColorPlate.h"
+
+#import "CJUseTime.h"
 #import "CJCoreDataManage.h"
 #import "Event.h"
 
-@interface CJAddViewController ()<CalendarViewControllerDelegate>
+@interface CJAddViewController ()<CalendarViewControllerDelegate, ColorPlateDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *eventTextLabel;
 @property (weak, nonatomic) IBOutlet UITextField *detailTextLabel;
 @property (weak, nonatomic) IBOutlet UIButton *datetimeButton;
+@property (weak, nonatomic) IBOutlet UIButton *colorButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
@@ -26,6 +28,9 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *eventStateButton;
 @property (weak, nonatomic) IBOutlet UIButton *detailStateButton;
+
+/** 选择颜色 */
+@property (nonatomic, strong) UIView *colorPlate;
 
 /** 日历 */
 @property (nonatomic, weak) CJCalendarViewController *calendar;
@@ -51,6 +56,7 @@
     return _usetime;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.cancelButton.layer.cornerRadius = 25;
@@ -62,6 +68,9 @@
     
     self.actionButton.layer.cornerRadius = 25;
     self.actionButton.layer.masksToBounds = YES;
+    
+    self.colorButton.backgroundColor = [UIColor purpleColor];
+    [self.colorButton setTitle:@"purpleColor" forState:UIControlStateNormal];
     
     NSDate *now = [NSDate date];
     NSString *str = [self.usetime dataToString:now];
@@ -91,33 +100,22 @@
 
 
 - (IBAction)selectColor:(UIButton *)sender {
-    NSLog(@"%s", __func__);
+    CJColorPlate *colorPlateView = [[CJColorPlate alloc] init];
+    colorPlateView.delegate = self;
+    [self.view addSubview:colorPlateView];
+    colorPlateView.transform = CGAffineTransformMakeTranslation(0, -CJHEIGHT);
+    [UIView animateWithDuration:0.25 animations:^{
+        colorPlateView.transform = CGAffineTransformIdentity;
+    }];
+}
+
+
+-(void) changeColor{
+    
 }
 
 
 - (IBAction)cancelButton:(id)sender {
-    
-    CJCoreDataManage *dateManage = [CJCoreDataManage sharedInstance];
-    NSManagedObjectContext *content = [dateManage managedObjectContext];
-
-    NSFetchRequest *req = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:content];
-
-    [req setEntity:entity];
-    
-    NSError *error;
-    
-    NSArray *arr = [content executeFetchRequest:req error:&error];
-    
-    for (Event *e in arr) {
-        NSLog(@"%@", e.name);
-        NSLog(@"%@", e.color);
-        NSLog(@"%@", e.detail);
-        NSLog(@"%@", e.datetime);
-    }
-    
-
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -178,11 +176,15 @@
         
         event.name = self.eventTextLabel.text;
         event.detail = self.detailTextLabel.text;
-        event.color =  @"blue";
+        event.color =  self.colorButton.titleLabel.text;
         
         NSDate *now = [self.usetime strToDate:self.datetimeButton.titleLabel.text];
         NSInteger seconds = [now timeIntervalSince1970];
         event.datetime = [NSNumber numberWithInteger:seconds];
+        
+        NSDate *nowDate = [NSDate date];
+        NSInteger ids = [nowDate timeIntervalSince1970];
+        event.ids = [NSNumber numberWithInteger:ids];
         
         NSError *error;
         if (![manageContent save:&error]) {
@@ -195,6 +197,7 @@
     if ([self.delegate respondsToSelector:@selector(addViewController:didSelectActionBtn:)]) {
         [self.delegate addViewController:self didSelectActionBtn:sender];
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -206,9 +209,15 @@
     [self.calendar setYear:year month:month day:day];
 }
 
-- (void)dealloc
-{
-    NSLog(@"add kill");
+#pragma mark - 添加颜色的代理
+
+-(void)colorPlate:(CJColorPlate *)colorPlate button:(UIButton *)button{
+    UIColor *color = button.titleLabel.textColor;
+    NSString *name = button.titleLabel.text;
+    self.colorButton.backgroundColor = color;
+    [self.colorButton setTitle:name forState:UIControlStateNormal];
 }
+
+
 
 @end

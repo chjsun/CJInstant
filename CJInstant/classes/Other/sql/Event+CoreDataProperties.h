@@ -2,7 +2,7 @@
 //  Event+CoreDataProperties.h
 //  CJInstant
 //
-//  Created by chjsun on 16/6/2.
+//  Created by chjsun on 16/6/3.
 //  Copyright © 2016年 chjsun. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,10 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Event (CoreDataProperties)
 
+@property (nullable, nonatomic, retain) NSString *color;
 @property (nullable, nonatomic, retain) NSNumber *datetime;
 @property (nullable, nonatomic, retain) NSString *detail;
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) NSString *color;
+@property (nullable, nonatomic, retain) NSNumber *ids;
 
 @end
 

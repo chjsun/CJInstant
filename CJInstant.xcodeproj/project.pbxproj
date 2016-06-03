@@ -11,7 +11,7 @@
 		94343B291CECCDFE0044BBC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94343B271CECCDFE0044BBC7 /* Main.storyboard */; };
 		94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2A1CECCDFE0044BBC7 /* Assets.xcassets */; };
 		94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94343B2C1CECCDFE0044BBC7 /* LaunchScreen.storyboard */; };
-		94343B391CECCDFE0044BBC7 /* instantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B381CECCDFE0044BBC7 /* instantTests.m */; };
+		94343B391CECCDFE0044BBC7 /* CJInstantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B381CECCDFE0044BBC7 /* CJInstantTests.m */; };
 		94343B631CECCE720044BBC7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B551CECCE720044BBC7 /* AppDelegate.m */; };
 		94343B641CECCE720044BBC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94343B561CECCE720044BBC7 /* main.m */; };
 		944455291CEEEEC500E7B478 /* CJBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455231CEEEEC500E7B478 /* CJBaseTableViewController.m */; };
@@ -22,6 +22,8 @@
 		9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553A1CF0B46B00E7B478 /* CJMonthViewController.m */; };
 		9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9444553D1CF0B47400E7B478 /* CJPastViewController.m */; };
 		944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455401CF0B47F00E7B478 /* CJWeekViewController.m */; };
+		944F04F61D0137CE0088EE93 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */; };
+		944F04F71D0137CE0088EE93 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F04F51D0137CE0088EE93 /* Event.m */; };
 		9468B8061CFFFE6300F3D442 /* CJCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */; };
 		9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F51CFFFE6300F3D442 /* CJMonthDayViewController.m */; };
 		9468B8081CFFFE6300F3D442 /* CJYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F71CFFFE6300F3D442 /* CJYearViewController.m */; };
@@ -38,9 +40,10 @@
 		9468B81E1CFFFEBC00F3D442 /* CJAddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9468B81A1CFFFEBC00F3D442 /* CJAddViewController.xib */; };
 		9468B81F1CFFFEBC00F3D442 /* CJMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */; };
 		9468B8291CFFFECB00F3D442 /* CJCoreDataManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */; };
-		9468B82A1CFFFECB00F3D442 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */; };
-		9468B82B1CFFFECB00F3D442 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8261CFFFECB00F3D442 /* Event.m */; };
 		9468B82C1CFFFECB00F3D442 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */; };
+		9468B82F1D00356800F3D442 /* CJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B82E1D00356800F3D442 /* CJCell.m */; };
+		9468B8321D00732800F3D442 /* CJColorPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8311D00732800F3D442 /* CJColorPlate.m */; };
+		9468B8341D00888000F3D442 /* CJColorPlate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9468B8331D00888000F3D442 /* CJColorPlate.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +65,7 @@
 		94343B2D1CECCDFE0044BBC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94343B2F1CECCDFE0044BBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94343B341CECCDFE0044BBC7 /* CJInstant.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJInstant.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94343B381CECCDFE0044BBC7 /* instantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = instantTests.m; sourceTree = "<group>"; };
+		94343B381CECCDFE0044BBC7 /* CJInstantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJInstantTests.m; sourceTree = "<group>"; };
 		94343B3A1CECCDFE0044BBC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94343B541CECCE720044BBC7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94343B551CECCE720044BBC7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,10 @@
 		9444553F1CF0B47F00E7B478 /* CJWeekViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJWeekViewController.h; sourceTree = "<group>"; };
 		944455401CF0B47F00E7B478 /* CJWeekViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJWeekViewController.m; sourceTree = "<group>"; };
 		944455431CF0B50200E7B478 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		944F04F21D0137CE0088EE93 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		944F04F41D0137CE0088EE93 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		944F04F51D0137CE0088EE93 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		9468B7F21CFFFE6300F3D442 /* CJCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCalendarViewController.h; sourceTree = "<group>"; };
 		9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCalendarViewController.m; sourceTree = "<group>"; };
 		9468B7F41CFFFE6300F3D442 /* CJMonthDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthDayViewController.h; sourceTree = "<group>"; };
@@ -113,11 +120,12 @@
 		9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMainViewController.m; sourceTree = "<group>"; };
 		9468B8211CFFFECB00F3D442 /* CJCoreDataManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCoreDataManage.h; sourceTree = "<group>"; };
 		9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCoreDataManage.m; sourceTree = "<group>"; };
-		9468B8231CFFFECB00F3D442 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
-		9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
-		9468B8251CFFFECB00F3D442 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		9468B8261CFFFECB00F3D442 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		9468B8281CFFFECB00F3D442 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		9468B82D1D00356800F3D442 /* CJCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CJCell.h; path = CJInstantTests/CJCell.h; sourceTree = SOURCE_ROOT; };
+		9468B82E1D00356800F3D442 /* CJCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CJCell.m; path = CJInstantTests/CJCell.m; sourceTree = SOURCE_ROOT; };
+		9468B8301D00732800F3D442 /* CJColorPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColorPlate.h; sourceTree = "<group>"; };
+		9468B8311D00732800F3D442 /* CJColorPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColorPlate.m; sourceTree = "<group>"; };
+		9468B8331D00888000F3D442 /* CJColorPlate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJColorPlate.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				94343B1D1CECCDFE0044BBC7 /* CJInstant */,
-				94343B371CECCDFE0044BBC7 /* instantTests */,
+				94343B371CECCDFE0044BBC7 /* CJInstantTests */,
 				94343B1C1CECCDFE0044BBC7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -185,13 +193,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		94343B371CECCDFE0044BBC7 /* instantTests */ = {
+		94343B371CECCDFE0044BBC7 /* CJInstantTests */ = {
 			isa = PBXGroup;
 			children = (
-				94343B381CECCDFE0044BBC7 /* instantTests.m */,
+				94343B381CECCDFE0044BBC7 /* CJInstantTests.m */,
 				94343B3A1CECCDFE0044BBC7 /* Info.plist */,
 			);
-			path = instantTests;
+			path = CJInstantTests;
 			sourceTree = "<group>";
 		};
 		94343B431CECCE720044BBC7 /* classes */ = {
@@ -279,6 +287,9 @@
 				9468B8121CFFFEAF00F3D442 /* CJMainScrollView.m */,
 				9468B8131CFFFEAF00F3D442 /* CJTipView.h */,
 				9468B8141CFFFEAF00F3D442 /* CJTipView.m */,
+				9468B8301D00732800F3D442 /* CJColorPlate.h */,
+				9468B8311D00732800F3D442 /* CJColorPlate.m */,
+				9468B8331D00888000F3D442 /* CJColorPlate.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -427,6 +438,8 @@
 		944455241CEEEEC500E7B478 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				9468B82D1D00356800F3D442 /* CJCell.h */,
+				9468B82E1D00356800F3D442 /* CJCell.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -519,11 +532,11 @@
 			children = (
 				9468B8211CFFFECB00F3D442 /* CJCoreDataManage.h */,
 				9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */,
-				9468B8231CFFFECB00F3D442 /* Event+CoreDataProperties.h */,
-				9468B8241CFFFECB00F3D442 /* Event+CoreDataProperties.m */,
-				9468B8251CFFFECB00F3D442 /* Event.h */,
-				9468B8261CFFFECB00F3D442 /* Event.m */,
 				9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */,
+				944F04F21D0137CE0088EE93 /* Event+CoreDataProperties.h */,
+				944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */,
+				944F04F41D0137CE0088EE93 /* Event.h */,
+				944F04F51D0137CE0088EE93 /* Event.m */,
 			);
 			path = sql;
 			sourceTree = "<group>";
@@ -612,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */,
+				9468B8341D00888000F3D442 /* CJColorPlate.xib in Resources */,
 				9468B80C1CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib in Resources */,
 				94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */,
 				94343B291CECCDFE0044BBC7 /* Main.storyboard in Resources */,
@@ -642,16 +656,17 @@
 				9468B82C1CFFFECB00F3D442 /* Model.xcdatamodeld in Sources */,
 				9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */,
 				94343B641CECCE720044BBC7 /* main.m in Sources */,
+				9468B82F1D00356800F3D442 /* CJCell.m in Sources */,
 				9468B81D1CFFFEBC00F3D442 /* CJAddViewController.m in Sources */,
+				944F04F61D0137CE0088EE93 /* Event+CoreDataProperties.m in Sources */,
+				9468B8321D00732800F3D442 /* CJColorPlate.m in Sources */,
 				940A5C7B1CFD709A00D72C35 /* UIView+CJFrame.m in Sources */,
-				9468B82A1CFFFECB00F3D442 /* Event+CoreDataProperties.m in Sources */,
 				9468B8091CFFFE6300F3D442 /* CJUseTime.m in Sources */,
 				9468B8171CFFFEAF00F3D442 /* CJTipView.m in Sources */,
 				9468B80A1CFFFE6300F3D442 /* CJDecisionView.m in Sources */,
 				9444553B1CF0B46B00E7B478 /* CJMonthViewController.m in Sources */,
 				9468B8061CFFFE6300F3D442 /* CJCalendarViewController.m in Sources */,
 				9468B80B1CFFFE6300F3D442 /* CJMonthDayCollectionCell.m in Sources */,
-				9468B82B1CFFFECB00F3D442 /* Event.m in Sources */,
 				9444553E1CF0B47400E7B478 /* CJPastViewController.m in Sources */,
 				9468B80D1CFFFE6300F3D442 /* CJSelectTimeScrollView.m in Sources */,
 				9468B8081CFFFE6300F3D442 /* CJYearViewController.m in Sources */,
@@ -661,6 +676,7 @@
 				9468B8151CFFFEAF00F3D442 /* CJHeaderNavigationView.m in Sources */,
 				9468B8291CFFFECB00F3D442 /* CJCoreDataManage.m in Sources */,
 				944455381CF0B46300E7B478 /* CJAllViewController.m in Sources */,
+				944F04F71D0137CE0088EE93 /* Event.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94343B391CECCDFE0044BBC7 /* instantTests.m in Sources */,
+				94343B391CECCDFE0044BBC7 /* CJInstantTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

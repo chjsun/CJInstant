@@ -15,9 +15,13 @@
 #import "CJHeaderNavigationView.h"
 #import "CJTipView.h"
 
+#import "CJCoreDataManage.h"
+#import "Event.h"
+#import "CJUseTime.h"
+
 #define onlyValue 78
 
-@interface CJMainViewController ()<UIScrollViewDelegate, HeaderNavitationDelegate>
+@interface CJMainViewController ()<UIScrollViewDelegate, HeaderNavitationDelegate, addViewControllerDelegate>
 
 /** scroll */
 @property (nonatomic, weak) CJMainScrollView *scrollView;
@@ -26,11 +30,21 @@
 /** tip */
 @property (nonatomic, weak) CJTipView *tipView;
 
+/** 时间 */
+@property(nonatomic, strong)CJUseTime *usetime;
+
 @end
 
 
 @implementation CJMainViewController
 
+
+-(CJUseTime *)usetime{
+    if (!_usetime) {
+        _usetime = [[CJUseTime alloc] init];
+    }
+    return _usetime;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -102,7 +116,36 @@
     
     tipView.backgroundColor = CJHeaderColor;
 
-    [tipView setTipForTitle:@"世间三世间三世间三世间三世间三世间三世间三" time:@"2016年5月28日" dayNumber:@"48"];
+//------------------------
+    CJCoreDataManage *dateManage = [CJCoreDataManage sharedInstance];
+    NSManagedObjectContext *content = [dateManage managedObjectContext];
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:content];
+    
+    [request setEntity:entity];
+    
+    // 排序
+    NSSortDescriptor *sortDescriptor =
+    [NSSortDescriptor sortDescriptorWithKey:@"datetime"
+                                  ascending:YES
+                                   selector:@selector(localizedCaseInsensitiveCompare:)];
+    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    
+    //查询条件
+    NSTimeInterval today = [self.usetime.getTodayYYmmhh timeIntervalSince1970];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"datetime>=%f", today];
+    [request setPredicate:predicate];
+    
+    NSError *error;
+    Event *firstData = [[content executeFetchRequest:request error:&error] firstObject];
+    
+//-------------------------------
+    NSInteger seconds = ([firstData.datetime integerValue]- today)/(60 * 60 * 24);
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[firstData.datetime integerValue]];
+    
+    [tipView setTipForTitle:firstData.name time:[self.usetime dataToString:date] dayNumber:[NSString stringWithFormat:@"%li", seconds]];
     
     [self.view addSubview:tipView];
     
@@ -139,6 +182,7 @@
     
     CJAddViewController *addController = [[CJAddViewController alloc] init];
 //    addController.deleteHidden = YES;
+    addController.delegate = self;
     [self presentViewController:addController animated:YES completion:nil];
 }
 
@@ -155,6 +199,15 @@
     UIButton *btn = (UIButton *)[self.view viewWithTag:than+onlyValue];
 
     [self switchControl:btn];
+}
+
+#pragma mark - 添加按钮的代理方法
+-(void)addViewController:(CJAddViewController *)controller didSelectActionBtn:(UIButton *)button{
+    [self.scrollView reloadAllController];
+}
+
+-(void)addViewController:(CJAddViewController *)controller didSelectDeleteBtn:(UIButton *)button{
+    
 }
 
 @end

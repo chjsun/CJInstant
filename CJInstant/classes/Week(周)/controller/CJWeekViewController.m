@@ -19,16 +19,6 @@
     
     NSMutableArray *data = [NSMutableArray array];
     
-    [data addObject:@{@"event": @"死亡倒计时"}];
-    [data addObject:@{@"event": @"死亡计时"}];
-    [data addObject:@{@"event": @"死倒计时"}];
-    [data addObject:@{@"event": @"亡倒计时"}];
-    [data addObject:@{@"event": @"死亡倒时"}];
-    [data addObject:@{@"event": @"死亡倒时"}];
-    [data addObject:@{@"event": @"死亡倒时"}];
-    [data addObject:@{@"event": @"死亡倒时"}];
-    [data addObject:@{@"event": @"死亡倒时"}];
-    
     self.data = data;
 }
 

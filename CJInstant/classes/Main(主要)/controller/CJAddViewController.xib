@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="actionButton" destination="GyL-X0-0WL" id="lmU-Ez-ZZb"/>
                 <outlet property="cancelButton" destination="DvR-zC-7N6" id="LQv-vu-NuR"/>
+                <outlet property="colorButton" destination="V9w-hu-b7r" id="65w-i4-snD"/>
                 <outlet property="datetimeButton" destination="oha-wf-8dh" id="Y2P-ZO-Wqh"/>
                 <outlet property="deleteButton" destination="S0P-v8-966" id="meK-Hf-EuI"/>
                 <outlet property="detailStateButton" destination="pZJ-2Q-Toc" id="Lc3-4W-C6R"/>

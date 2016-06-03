@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class CJCell;
 @interface CJBaseTableViewCell : UITableViewCell
 
 
 +(instancetype) baseCellForTableView: (UITableView *)tableView;
 
 /** 数据 */
-@property (nonatomic, strong) NSDictionary *data;
+@property (nonatomic, strong) CJCell *cell;
 @end

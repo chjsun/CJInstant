@@ -237,6 +237,10 @@
 }
 
 
+-(NSDate *)getTodayYYmmhh{
+    NSDate *date = [NSDate date];
+    return [self strToDate:[self dataToString:date]];
+}
 
 
 @end

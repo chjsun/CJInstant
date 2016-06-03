@@ -58,4 +58,6 @@
 - (NSDate *) strToDate:(NSString *)dateStr;
 // 日期转字符串
 - (NSString *) dataToString:(NSDate *)date;
+// 今天的00:00:00时间
+-(NSDate *)getTodayYYmmhh;
 @end

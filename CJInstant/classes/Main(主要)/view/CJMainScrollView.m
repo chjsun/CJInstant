@@ -20,6 +20,15 @@
 /** 记录宽度 */
 @property (nonatomic, assign) CGFloat nextWidth;
 
+/** allController */
+@property(nonatomic, weak)CJAllViewController *allController;
+/** allController */
+@property(nonatomic, weak)CJMonthViewController *monthController;
+/** allController */
+@property(nonatomic, weak)CJWeekViewController *weekController;
+/** allController */
+@property(nonatomic, weak)CJPastViewController *pastController;
+
 @end
 
 
@@ -33,18 +42,22 @@
 -(void) setUpAllControllerWithSuperControll:(UIViewController *)controller{
     //所有
     CJAllViewController *all = [[CJAllViewController alloc] init];
+    self.allController = all;
     [self setUpController:all superController:controller];
     
     //周
     CJWeekViewController *week = [[CJWeekViewController alloc] init];
+    self.weekController = week;
     [self setUpController:week superController:controller];
     
     //月
     CJMonthViewController *month = [[CJMonthViewController alloc] init];
+    self.monthController = month;
     [self setUpController:month superController:controller];
     
     //过去的
     CJPastViewController *past = [[CJPastViewController alloc] init];
+    self.pastController = past;
     [self setUpController:past superController:controller];
     
     //添加scrollView到控制器
@@ -64,7 +77,12 @@
     [superController addChildViewController:controller];
     controller.view.backgroundColor = [UIColor whiteColor];
     self.nextWidth += CJWIDTH;
-    
 }
 
+-(void)reloadAllController{
+    [self.allController loadData];
+    [self.allController.tableView reloadData];
+    
+    
+}
 @end

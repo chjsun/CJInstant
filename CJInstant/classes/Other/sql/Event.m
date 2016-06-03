@@ -2,7 +2,7 @@
 //  Event.m
 //  CJInstant
 //
-//  Created by chjsun on 16/6/2.
+//  Created by chjsun on 16/6/3.
 //  Copyright © 2016年 chjsun. All rights reserved.
 //
 

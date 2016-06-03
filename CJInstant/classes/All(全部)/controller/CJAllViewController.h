@@ -10,4 +10,6 @@
 
 @interface CJAllViewController : CJBaseTableViewController
 
+-(void) loadData;
+
 @end

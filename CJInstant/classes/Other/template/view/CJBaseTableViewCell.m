@@ -7,6 +7,7 @@
 //
 
 #import "CJBaseTableViewCell.h"
+#import "CJCell.h"
 
 @interface CJBaseTableViewCell()
 
@@ -16,6 +17,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CountdownLabel;
+
+/** 所有颜色 */
+@property (nonatomic, strong) NSDictionary *dictColor;
 
 @end
 
@@ -31,14 +35,31 @@ static NSString * const identifier = @"baseTableViewCell";
 
 }
 
+-(NSDictionary *)dictColor{
+    if (!_dictColor) {
+        _dictColor = @{@"purpleColor": [UIColor purpleColor],
+                       @"redColor": [UIColor redColor],
+                       @"MidNightColor":CJColor(9, 21, 128),
+                       @"greenColor":[UIColor greenColor],
+                       @"blueColor":[UIColor blueColor],
+                       @"blackColor":[UIColor blackColor]
+                       };
 
--(void)setData:(NSDictionary *)data{
-    _data = data;
-    self.eventLabel.text = data[@"event"];
-    self.timeLabel.text = data[@"time"];
-    self.describeLabel.text = data[@"desctibe"];
-    self.stateLabel.text = data[@"state"];
-    self.CountdownLabel.text = data[@"countdown"];
+    }
+    return _dictColor;
+}
+
+-(void)setCell:(CJCell *)cell{
+    _cell = cell;
+    self.eventLabel.text = cell.event;
+    self.timeLabel.text = cell.datetime;
+    self.describeLabel.text = cell.detail;
+    self.stateLabel.text = cell.state;
+    self.CountdownLabel.text = cell.countdown;
+    
+    self.stateLabel.textColor = self.dictColor[cell.color];
+    self.CountdownLabel.textColor = self.dictColor[cell.color];
+    
 }
 
 +(instancetype)baseCellForTableView:(UITableView *)tableView{

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class CJAddViewController;
+@class CJCell;
 @protocol addViewControllerDelegate <NSObject>
 
 @optional
@@ -22,7 +23,9 @@
 
 @property (nonatomic, assign) id<addViewControllerDelegate> delegate;
 
-
 @property (nonatomic, assign) BOOL deleteHidden;
+
+/** cjcell */
+@property (nonatomic, strong) CJCell *cjcell;
 
 @end

@@ -9,15 +9,17 @@
 #import "CJBaseTableViewController.h"
 
 #import "CJBaseTableViewCell.h"
+#import "CJUseTime.h"
+#import "CJCell.h"
 
 #import "RTDragCellTableView.h"
 
 @interface CJBaseTableViewController ()<RTDragCellTableViewDataSource, RTDragCellTableViewDelegate>
-
+/** 时间处理 */
+@property (nonatomic, strong) CJUseTime *usetime;
 @end
 
 @implementation CJBaseTableViewController
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,7 +58,7 @@
     // Configure the cell...
     cell.backgroundColor = [UIColor whiteColor];
     
-    cell.data = self.data[indexPath.row];
+    cell.cell = self.data[indexPath.row];
     
     return cell;
 }

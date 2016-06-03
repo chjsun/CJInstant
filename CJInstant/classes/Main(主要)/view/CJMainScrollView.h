@@ -13,4 +13,6 @@
 //设置所有控制器
 -(void) setUpAllControllerWithSuperControll:(UIViewController *)controller;
 
+-(void)reloadAllController;
+
 @end
