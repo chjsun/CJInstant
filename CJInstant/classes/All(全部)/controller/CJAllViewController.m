@@ -91,7 +91,6 @@
     // 该操作只是唤醒主线程立即操作 presentViewController: animated: completion， 弹出控制器
     // 可以什么都不做
     [self performSelector:@selector(dontSleep) onThread:[NSThread mainThread] withObject:nil waitUntilDone:nil];
-    
 }
 
 -(void) dontSleep{}

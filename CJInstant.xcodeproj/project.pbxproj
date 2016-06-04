@@ -44,6 +44,7 @@
 		9468B82F1D00356800F3D442 /* CJCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B82E1D00356800F3D442 /* CJCell.m */; };
 		9468B8321D00732800F3D442 /* CJColorPlate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B8311D00732800F3D442 /* CJColorPlate.m */; };
 		9468B8341D00888000F3D442 /* CJColorPlate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9468B8331D00888000F3D442 /* CJColorPlate.xib */; };
+		94B425FC1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B425FB1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		9468B8301D00732800F3D442 /* CJColorPlate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJColorPlate.h; sourceTree = "<group>"; };
 		9468B8311D00732800F3D442 /* CJColorPlate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJColorPlate.m; sourceTree = "<group>"; };
 		9468B8331D00888000F3D442 /* CJColorPlate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJColorPlate.xib; sourceTree = "<group>"; };
+		94B425FA1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CJCoreDataManage+CJCoreDateUtils.h"; sourceTree = "<group>"; };
+		94B425FB1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CJCoreDataManage+CJCoreDateUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -532,6 +535,8 @@
 			children = (
 				9468B8211CFFFECB00F3D442 /* CJCoreDataManage.h */,
 				9468B8221CFFFECB00F3D442 /* CJCoreDataManage.m */,
+				94B425FA1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.h */,
+				94B425FB1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.m */,
 				9468B8271CFFFECB00F3D442 /* Model.xcdatamodeld */,
 				944F04F21D0137CE0088EE93 /* Event+CoreDataProperties.h */,
 				944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */,
@@ -656,6 +661,7 @@
 				9468B82C1CFFFECB00F3D442 /* Model.xcdatamodeld in Sources */,
 				9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */,
 				94343B641CECCE720044BBC7 /* main.m in Sources */,
+				94B425FC1D032700005E6C46 /* CJCoreDataManage+CJCoreDateUtils.m in Sources */,
 				9468B82F1D00356800F3D442 /* CJCell.m in Sources */,
 				9468B81D1CFFFEBC00F3D442 /* CJAddViewController.m in Sources */,
 				944F04F61D0137CE0088EE93 /* Event+CoreDataProperties.m in Sources */,

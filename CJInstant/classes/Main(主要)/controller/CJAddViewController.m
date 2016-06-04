@@ -13,7 +13,7 @@
 #import "CJColorPlate.h"
 
 #import "CJUseTime.h"
-#import "CJCoreDataManage.h"
+#import "CJCoreDataManage+CJCoreDateUtils.h"
 #import "Event.h"
 #import "CJCell.h"
 
@@ -149,27 +149,13 @@
 
 - (IBAction)deleteButton:(UIButton *)sender {
     
-    CJCoreDataManage *dataManage = [CJCoreDataManage sharedInstance];
-    NSManagedObjectContext *manageContent = [dataManage managedObjectContext];
-
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:manageContent];
-        
-    [request setEntity:entity];
-        
+    CJCoreDataManage *manage = [CJCoreDataManage sharedInstance];
+    [manage deleteEventForIds:self.cjcell.ids];
     //            查询条件
-    NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
-    [request setPredicate:predicate];
-        
-    NSError *error;
-    Event *event = [[manageContent executeFetchRequest:request error:&error] lastObject];
-    [manageContent deleteObject:event];
+//    NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
+//    [request setPredicate:predicate];
     
-    if (![manageContent save:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-        
+    
     if ([self.delegate respondsToSelector:@selector(addViewController:didSelectDeleteBtn:)]) {
         [self.delegate addViewController:self didSelectDeleteBtn:sender];
     }
@@ -220,45 +206,25 @@
     
     }else{
         CJCoreDataManage *dataManage = [CJCoreDataManage sharedInstance];
-        NSManagedObjectContext *manageContent = [dataManage managedObjectContext];
-        Event *event;
-        if (self.cjcell) {
-
-            NSFetchRequest *request = [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:manageContent];
-            
-            [request setEntity:entity];
-
-//            查询条件
-            NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
-            [request setPredicate:predicate];
-            
-            NSError *error;
-            event = [[manageContent executeFetchRequest:request error:&error] lastObject];
-            
-        }else{
-            event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:manageContent];
-            
-            NSDate *nowDate = [NSDate date];
-            NSInteger ids = [nowDate timeIntervalSince1970];
-            event.ids = [NSNumber numberWithInteger:ids];
-
-        }
+        CJCell *cell = [[CJCell alloc] init];
         
-        event.name = self.eventTextLabel.text;
-        event.detail = self.detailTextLabel.text;
-        event.color =  self.colorButton.titleLabel.text;
-
+        cell.event = self.eventTextLabel.text;
+        cell.detail = self.detailTextLabel.text;
+        cell.color =  self.colorButton.titleLabel.text;
+        
         // 时间戳
         NSDate *now = [self.usetime strToDate:self.datetimeButton.titleLabel.text];
         NSInteger seconds = [now timeIntervalSince1970];
-        event.datetime = [NSNumber numberWithInteger:seconds];
+        NSNumber *datetime = [NSNumber numberWithInteger:seconds];
         
-        NSError *error;
-        if (![manageContent save:&error]) {
+        if (self.cjcell) {
+            cell.ids = self.cjcell.ids;
+            [dataManage updateEvent:cell Datetime:datetime];
+        }else{
+            [dataManage createEvent:cell Datetime:datetime];
             
-            NSLog(@"保存/修改失败－－%@", [error localizedDescription]);
         }
+        
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     
