@@ -201,7 +201,7 @@
     [self switchControl:btn];
 }
 
-#pragma mark - 添加按钮的代理方法
+#pragma mark - addcontroller delegate
 -(void)addViewController:(CJAddViewController *)controller didSelectActionBtn:(UIButton *)button{
     [self.scrollView reloadAllController];
 }

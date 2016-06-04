@@ -14,6 +14,7 @@
 
 #import "CJBaseTableViewCell.h"
 #import "CJAddViewController.h"
+#import "CJMainScrollView.h"
 
 @interface CJAllViewController ()<addViewControllerDelegate>
 /** 时间处理 */
@@ -90,8 +91,15 @@
     // 该操作只是唤醒主线程立即操作 presentViewController: animated: completion， 弹出控制器
     // 可以什么都不做
     [self performSelector:@selector(dontSleep) onThread:[NSThread mainThread] withObject:nil waitUntilDone:nil];
-
+    
 }
+
 -(void) dontSleep{}
+
+
+-(void)addViewController:(CJAddViewController *)controller didSelectActionBtn:(UIButton *)button{
+    [self loadData];
+    [self.tableView reloadData];
+}
 
 @end

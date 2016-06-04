@@ -94,6 +94,16 @@
 
     [self.datetimeButton setTitle:str forState:UIControlStateNormal];
 
+    // 初始化的时候可以根据传过来的数据给页面赋值
+    self.eventTextLabel.text = self.cjcell.event;
+    self.detailTextLabel.text = self.cjcell.detail;
+    if (self.cjcell.datetime) {
+        [self.datetimeButton setTitle:self.cjcell.datetime forState:UIControlStateNormal];
+    }
+    if (self.dictColor[self.cjcell.color]) {
+        self.colorButton.backgroundColor = self.dictColor[self.cjcell.color];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -188,23 +198,40 @@
         }];
     
     }else{
-        
         CJCoreDataManage *dataManage = [CJCoreDataManage sharedInstance];
         NSManagedObjectContext *manageContent = [dataManage managedObjectContext];
-        
-        Event *event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:manageContent];
+        Event *event;
+        if (self.cjcell) {
+
+            NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:manageContent];
+            
+            [request setEntity:entity];
+
+//            查询条件
+            NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
+            [request setPredicate:predicate];
+            
+            NSError *error;
+            event = [[manageContent executeFetchRequest:request error:&error] lastObject];
+            
+        }else{
+            event = [NSEntityDescription insertNewObjectForEntityForName:@"Event" inManagedObjectContext:manageContent];
+            
+            NSDate *nowDate = [NSDate date];
+            NSInteger ids = [nowDate timeIntervalSince1970];
+            event.ids = [NSNumber numberWithInteger:ids];
+
+        }
         
         event.name = self.eventTextLabel.text;
         event.detail = self.detailTextLabel.text;
         event.color =  self.colorButton.titleLabel.text;
-        
+
+        // 时间戳
         NSDate *now = [self.usetime strToDate:self.datetimeButton.titleLabel.text];
         NSInteger seconds = [now timeIntervalSince1970];
         event.datetime = [NSNumber numberWithInteger:seconds];
-        
-        NSDate *nowDate = [NSDate date];
-        NSInteger ids = [nowDate timeIntervalSince1970];
-        event.ids = [NSNumber numberWithInteger:ids];
         
         NSError *error;
         if (![manageContent save:&error]) {
@@ -220,14 +247,6 @@
     }
 }
 
--(void)setCjcell:(CJCell *)cjcell{
-    _cjcell = cjcell;
-    
-    self.eventTextLabel.text = cjcell.event;
-    self.detailTextLabel.text = cjcell.detail;
-    [self.datetimeButton setTitle:cjcell.datetime forState:UIControlStateNormal];
-    self.colorButton.backgroundColor = self.dictColor[cjcell.color];
-}
 
 #pragma mark - 日历控制器代理
 -(void)CalendarViewController:(CJCalendarViewController *)controller didSelectActionYear:(NSString *)year month:(NSString *)month day:(NSString *)day{

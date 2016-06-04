@@ -69,14 +69,6 @@
     return CJItemHeight;
 }
 
-//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    CJAddViewController *addControl = [[CJAddViewController alloc] init];
-//    addControl.delegate = self;
-//    
-//    [self presentViewController:addControl animated:YES completion:nil];
-//    NSLog(@"ssss");
-//
-//}
 
 #pragma mark - datasource
 -(NSArray *)originalArrayDataForTableView:(RTDragCellTableView *)tableView{
