@@ -108,6 +108,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
+                <outlet property="bgView" destination="XXk-Zl-1O3" id="yjM-9n-VPz"/>
                 <outlet property="btn1" destination="b06-pX-Wkc" id="fh0-eP-YhX"/>
                 <outlet property="btn2" destination="6RM-6K-5Qd" id="7eg-iR-t5D"/>
                 <outlet property="btn3" destination="Hh1-UH-5gZ" id="Qnk-fB-QfE"/>

@@ -76,6 +76,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.colorButton.layer.masksToBounds = YES;
+    self.colorButton.layer.cornerRadius = 5;
+    
     self.cancelButton.layer.cornerRadius = 25;
     self.cancelButton.layer.masksToBounds = YES;
     

@@ -88,7 +88,9 @@
                                 <constraint firstAttribute="height" constant="50" id="VPJ-Wa-I6j"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="颜色"/>
+                            <state key="normal" title="颜色">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </state>
                             <connections>
                                 <action selector="selectColor:" destination="-1" eventType="touchUpInside" id="3lH-Gd-RiF"/>
                             </connections>
