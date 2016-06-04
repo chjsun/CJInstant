@@ -149,10 +149,31 @@
 
 - (IBAction)deleteButton:(UIButton *)sender {
     
+    CJCoreDataManage *dataManage = [CJCoreDataManage sharedInstance];
+    NSManagedObjectContext *manageContent = [dataManage managedObjectContext];
+
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:manageContent];
+        
+    [request setEntity:entity];
+        
+    //            查询条件
+    NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
+    [request setPredicate:predicate];
+        
+    NSError *error;
+    Event *event = [[manageContent executeFetchRequest:request error:&error] lastObject];
+    [manageContent deleteObject:event];
     
+    if (![manageContent save:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+        
     if ([self.delegate respondsToSelector:@selector(addViewController:didSelectDeleteBtn:)]) {
         [self.delegate addViewController:self didSelectDeleteBtn:sender];
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
@@ -236,7 +257,7 @@
         NSError *error;
         if (![manageContent save:&error]) {
             
-            NSLog(@"保存失败－－%@", [error localizedDescription]);
+            NSLog(@"保存/修改失败－－%@", [error localizedDescription]);
         }
         [self dismissViewControllerAnimated:YES completion:nil];
     }
