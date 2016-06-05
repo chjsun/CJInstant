@@ -95,14 +95,4 @@
 
 -(void) dontSleep{}
 
-#pragma mark - add delegate
--(void)addViewController:(CJAddViewController *)controller didSelectActionBtn:(UIButton *)button{
-    [self loadData];
-    [self.tableView reloadData];
-}
-
--(void)addViewController:(CJAddViewController *)controller didSelectDeleteBtn:(UIButton *)button{
-    [self loadData];
-    [self.tableView reloadData];
-}
 @end

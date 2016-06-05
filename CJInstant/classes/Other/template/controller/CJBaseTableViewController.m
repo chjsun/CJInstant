@@ -80,4 +80,18 @@
     self.data = (NSMutableArray *)newArray;
 }
 
+#pragma mark - add delegate
+-(void)addViewController:(CJAddViewController *)controller didSelectActionBtn:(UIButton *)button{
+    if ([self.delegate respondsToSelector:@selector(baseTableViewControllerDidSelect:)]) {
+        [self.delegate baseTableViewControllerDidSelect:self];
+    }
+}
+
+-(void)addViewController:(CJAddViewController *)controller didSelectDeleteBtn:(UIButton *)button{
+    if ([self.delegate respondsToSelector:@selector(baseTableViewControllerDidSelect:)]) {
+        [self.delegate baseTableViewControllerDidSelect:self];
+    }
+}
+
+
 @end

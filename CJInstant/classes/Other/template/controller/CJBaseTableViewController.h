@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class CJBaseTableViewController;
+@protocol baseTableViewControllerDelegate <NSObject>
+
+@optional
+-(void)baseTableViewControllerDidSelect:(CJBaseTableViewController *)controller;
+
+@end
+
 @interface CJBaseTableViewController : UITableViewController
 
 /** 数据 */
 @property (nonatomic, strong) NSArray *data;
+/** delegate */
+@property (nonatomic, assign) id<baseTableViewControllerDelegate> delegate;
 
 @end

@@ -154,10 +154,6 @@
     
     CJCoreDataManage *manage = [CJCoreDataManage sharedInstance];
     [manage deleteEventForIds:self.cjcell.ids];
-    //            查询条件
-//    NSPredicate*predicate = [NSPredicate predicateWithFormat:@"ids=%@", self.cjcell.ids];
-//    [request setPredicate:predicate];
-    
     
     if ([self.delegate respondsToSelector:@selector(addViewController:didSelectDeleteBtn:)]) {
         [self.delegate addViewController:self didSelectDeleteBtn:sender];

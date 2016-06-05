@@ -15,7 +15,7 @@
 
 #import "CJBaseTableViewController.h"
 
-@interface CJMainScrollView()
+@interface CJMainScrollView()<baseTableViewControllerDelegate>
 
 /** 记录宽度 */
 @property (nonatomic, assign) CGFloat nextWidth;
@@ -42,21 +42,25 @@
 -(void) setUpAllControllerWithSuperControll:(UIViewController *)controller{
     //所有
     CJAllViewController *all = [[CJAllViewController alloc] init];
+    all.delegate = self;
     self.allController = all;
     [self setUpController:all superController:controller];
     
     //周
     CJWeekViewController *week = [[CJWeekViewController alloc] init];
+    week.delegate = self;
     self.weekController = week;
     [self setUpController:week superController:controller];
     
     //月
     CJMonthViewController *month = [[CJMonthViewController alloc] init];
+    month.delegate = self;
     self.monthController = month;
     [self setUpController:month superController:controller];
     
     //过去的
     CJPastViewController *past = [[CJPastViewController alloc] init];
+    past.delegate = self;
     self.pastController = past;
     [self setUpController:past superController:controller];
     
@@ -83,6 +87,18 @@
     [self.allController loadData];
     [self.allController.tableView reloadData];
     
+    [self.weekController loadData];
+    [self.weekController.tableView reloadData];
     
+    [self.monthController loadData];
+    [self.monthController.tableView reloadData];
+    
+    [self.pastController loadData];
+    [self.pastController.tableView reloadData];
+}
+
+#pragma mark - baseDelegate
+-(void)baseTableViewControllerDidSelect:(CJBaseTableViewController *)controller{
+    [self reloadAllController];
 }
 @end

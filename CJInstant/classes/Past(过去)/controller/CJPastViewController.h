@@ -9,5 +9,5 @@
 #import "CJBaseTableViewController.h"
 
 @interface CJPastViewController : CJBaseTableViewController
-
+-(void) loadData;
 @end
