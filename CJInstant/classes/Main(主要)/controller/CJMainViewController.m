@@ -124,13 +124,12 @@
     NSInteger chinesePoint = [self.usetime chineseMonthDayPoint];
     NSInteger gregorianPoint = [self.usetime gregorianMonthDayPoint];
     
-    NSInteger tmp = INT16_MAX;
+    NSInteger tmp = INT64_MAX;
 
     CJFestival *nextFestival;
 
     for (CJFestival *festival in gregorianFest) {
         NSInteger datetimePoint = [self.usetime getMonthDayPoint:festival.datetime];
-       
         if (datetimePoint >= gregorianPoint) {
             if (tmp > datetimePoint) {
                 tmp = datetimePoint - gregorianPoint;
@@ -150,20 +149,18 @@
         }
     }
     
-    
-    if (tmp==INT16_MAX) {
-        
+    if (tmp==INT64_MAX) {
+        // 大年初一。继续完善
+    }
+    NSInteger nowPoint = [self.usetime getMonthDayPoint:nextFestival.datetime];
+    NSArray *special = [self.usetime specialFestivalPoint:nowPoint];
+    if (special) {
+        [tipView setTipForTitle:special[0] time:special[1] dayNumber:special[2]];
+    }else{
+        NSArray *nextTime = [nextFestival.datetime componentsSeparatedByString:@"-"];
+        [tipView setTipForTitle:nextFestival.event time:[NSString stringWithFormat:@"%@ 月 %@", nextTime[0], nextTime[1]] dayNumber:[NSString stringWithFormat:@"%li", tmp]];
     }
     
-    
-//------------------------
-    
-    
-//-------------------------------
-//    NSInteger seconds = ([firstData.datetime integerValue]- today)/(60 * 60 * 24);
-//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[firstData.datetime integerValue]];
-    
-    [tipView setTipForTitle:nextFestival.event time:nextFestival.datetime dayNumber:[NSString stringWithFormat:@"%li", tmp]];
     
     [self.view addSubview:tipView];
     

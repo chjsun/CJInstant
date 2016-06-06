@@ -73,4 +73,6 @@
 -(NSInteger) chineseMonthDayPoint;
 
 -(NSInteger) gregorianMonthDayPoint;
+// 计算特殊的日子：父亲，母亲，感恩节
+-(NSArray *) specialFestivalPoint:(NSInteger)nextFestivalPoint;
 @end

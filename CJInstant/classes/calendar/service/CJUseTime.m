@@ -245,10 +245,13 @@
 
 // 根据月日返回对应的大小
 -(NSInteger)getMonthDayPoint:(NSString *)monthDay{
-    NSArray *arr = [monthDay componentsSeparatedByString:@"-"];
-    NSInteger month = [arr[0] integerValue];
-    NSInteger day = [arr[1] integerValue];
-    return month * 30 + day;
+    NSDate *date = [NSDate date];
+    
+    NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
+   
+    NSDate *now = [self strToDate:[NSString stringWithFormat:@"%@-%@", year, monthDay]];
+    NSTimeInterval monthDayPoint = [now timeIntervalSince1970];
+    return monthDayPoint;
 
 }
 
@@ -272,6 +275,65 @@
     NSInteger nowPoint = [self getMonthDayPoint:[NSString stringWithFormat:@"%@-%@", nowArr[1], nowArr[2]]];
     
     return nowPoint;
+}
+
+-(NSInteger) momFestivalPoint{
+    NSDate *date = [NSDate date];
+    
+    NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
+    
+    NSDate *early = [self strToDate:[NSString stringWithFormat:@"%@-%@", year, @"5-1"]];
+    NSInteger week = [self getDateInfo:early];
+    NSTimeInterval wuyiStamp = [early timeIntervalSince1970];
+    return wuyiStamp + (6 - week) * (60 * 60 * 24);
+    
+}
+
+-(NSInteger) dadFestivalPoint{
+    NSDate *date = [NSDate date];
+    
+    NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
+    
+    NSDate *early = [self strToDate:[NSString stringWithFormat:@"%@-%@", year, @"6-1"]];
+    NSInteger week = [self getDateInfo:early];
+    NSTimeInterval wuyiStamp = [early timeIntervalSince1970];
+    return wuyiStamp + (13 - week) * (60 * 60 * 24);
+}
+
+-(NSInteger) thankfulFestivalPoint{
+    NSDate *date = [NSDate date];
+    
+    NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
+    
+    NSDate *early = [self strToDate:[NSString stringWithFormat:@"%@-%@", year, @"11-1"]];
+    NSInteger week = [self getDateInfo:early];
+    NSTimeInterval wuyiStamp = [early timeIntervalSince1970];
+    return wuyiStamp + (20 - week) * (60 * 60 * 24);
+}
+
+-(NSArray *) specialFestivalPoint:(NSInteger)nextFestivalPoint{
+    NSInteger mom = [self momFestivalPoint];
+    NSInteger now = [self gregorianMonthDayPoint];
+    if (mom > now && mom<nextFestivalPoint) {
+        
+        NSInteger nextDay = (mom - now) / 3600 / 24;
+        return @[@"母亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:mom]], [NSNumber numberWithInteger:nextDay]];
+    }
+    NSInteger dad = [self momFestivalPoint];
+    if (dad > now && dad<nextFestivalPoint) {
+        
+        NSInteger nextDay = (dad - now) / 3600 / 24;
+        return @[@"父亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:dad]], [NSNumber numberWithInteger:nextDay]];
+    }
+    NSInteger thanksful = [self momFestivalPoint];
+    if (thanksful > now && thanksful<nextFestivalPoint) {
+        
+        NSInteger nextDay = (thanksful - now) / 3600 / 24;
+        return @[@"母亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:thanksful]], [NSNumber numberWithInteger:nextDay]];
+    }
+    
+    return nil;
+    
 }
 
 @end
