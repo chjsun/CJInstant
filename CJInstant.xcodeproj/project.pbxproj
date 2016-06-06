@@ -24,6 +24,9 @@
 		944455411CF0B47F00E7B478 /* CJWeekViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 944455401CF0B47F00E7B478 /* CJWeekViewController.m */; };
 		944F04F61D0137CE0088EE93 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */; };
 		944F04F71D0137CE0088EE93 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 944F04F51D0137CE0088EE93 /* Event.m */; };
+		9459D48A1D053F09001A9CE4 /* CJFestival.m in Sources */ = {isa = PBXBuildFile; fileRef = 9459D4891D053F09001A9CE4 /* CJFestival.m */; };
+		9459D48C1D054258001A9CE4 /* chineseCalendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9459D48B1D054258001A9CE4 /* chineseCalendar.plist */; };
+		9459D48E1D054266001A9CE4 /* gregorianCalendar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9459D48D1D054266001A9CE4 /* gregorianCalendar.plist */; };
 		9468B8061CFFFE6300F3D442 /* CJCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */; };
 		9468B8071CFFFE6300F3D442 /* CJMonthDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F51CFFFE6300F3D442 /* CJMonthDayViewController.m */; };
 		9468B8081CFFFE6300F3D442 /* CJYearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9468B7F71CFFFE6300F3D442 /* CJYearViewController.m */; };
@@ -91,6 +94,10 @@
 		944F04F31D0137CE0088EE93 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
 		944F04F41D0137CE0088EE93 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		944F04F51D0137CE0088EE93 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		9459D4881D053F09001A9CE4 /* CJFestival.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJFestival.h; sourceTree = "<group>"; };
+		9459D4891D053F09001A9CE4 /* CJFestival.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJFestival.m; sourceTree = "<group>"; };
+		9459D48B1D054258001A9CE4 /* chineseCalendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = chineseCalendar.plist; sourceTree = "<group>"; };
+		9459D48D1D054266001A9CE4 /* gregorianCalendar.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = gregorianCalendar.plist; sourceTree = "<group>"; };
 		9468B7F21CFFFE6300F3D442 /* CJCalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCalendarViewController.h; sourceTree = "<group>"; };
 		9468B7F31CFFFE6300F3D442 /* CJCalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCalendarViewController.m; sourceTree = "<group>"; };
 		9468B7F41CFFFE6300F3D442 /* CJMonthDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthDayViewController.h; sourceTree = "<group>"; };
@@ -192,6 +199,8 @@
 		94343B1E1CECCDFE0044BBC7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9459D48B1D054258001A9CE4 /* chineseCalendar.plist */,
+				9459D48D1D054266001A9CE4 /* gregorianCalendar.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -256,7 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				94343B491CECCE720044BBC7 /* controller */,
-				94343B4C1CECCE720044BBC7 /* model */,
+				9459D4871D053EC7001A9CE4 /* model */,
 				94343B4D1CECCE720044BBC7 /* view */,
 			);
 			path = "Main(主要)";
@@ -272,13 +281,6 @@
 				9468B81C1CFFFEBC00F3D442 /* CJMainViewController.m */,
 			);
 			path = controller;
-			sourceTree = "<group>";
-		};
-		94343B4C1CECCE720044BBC7 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 		94343B4D1CECCE720044BBC7 /* view */ = {
@@ -474,6 +476,15 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		9459D4871D053EC7001A9CE4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				9459D4881D053F09001A9CE4 /* CJFestival.h */,
+				9459D4891D053F09001A9CE4 /* CJFestival.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		9468B7F01CFFFE6300F3D442 /* calendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,7 +640,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9459D48C1D054258001A9CE4 /* chineseCalendar.plist in Resources */,
 				94343B2E1CECCDFE0044BBC7 /* LaunchScreen.storyboard in Resources */,
+				9459D48E1D054266001A9CE4 /* gregorianCalendar.plist in Resources */,
 				9468B8341D00888000F3D442 /* CJColorPlate.xib in Resources */,
 				9468B80C1CFFFE6300F3D442 /* CJMonthDayCollectionCell.xib in Resources */,
 				94343B2B1CECCDFE0044BBC7 /* Assets.xcassets in Resources */,
@@ -680,6 +693,7 @@
 				9444552F1CF029B100E7B478 /* RTDragCellTableView.m in Sources */,
 				9468B8161CFFFEAF00F3D442 /* CJMainScrollView.m in Sources */,
 				9468B8151CFFFEAF00F3D442 /* CJHeaderNavigationView.m in Sources */,
+				9459D48A1D053F09001A9CE4 /* CJFestival.m in Sources */,
 				9468B8291CFFFECB00F3D442 /* CJCoreDataManage.m in Sources */,
 				944455381CF0B46300E7B478 /* CJAllViewController.m in Sources */,
 				944F04F71D0137CE0088EE93 /* Event.m in Sources */,

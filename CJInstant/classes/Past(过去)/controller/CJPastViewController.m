@@ -56,7 +56,7 @@
     //查询条件
     NSTimeInterval today = [self.usetime.getTodayYYmmhh timeIntervalSince1970];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"datetime<=%f", today];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"datetime<%f", today];
     [request setPredicate:predicate];
     
     NSError *error;

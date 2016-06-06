@@ -236,11 +236,42 @@
     return [self.chineseDays objectAtIndex:(localeComp.day==0? 29: localeComp.day-1)];
 }
 
+// ---------------this app new add-----------------------
 
 -(NSDate *)getTodayYYmmhh{
     NSDate *date = [NSDate date];
     return [self strToDate:[self dataToString:date]];
 }
 
+// 根据月日返回对应的大小
+-(NSInteger)getMonthDayPoint:(NSString *)monthDay{
+    NSArray *arr = [monthDay componentsSeparatedByString:@"-"];
+    NSInteger month = [arr[0] integerValue];
+    NSInteger day = [arr[1] integerValue];
+    return month * 30 + day;
+
+}
+
+// 返回农历上，今天的point
+-(NSInteger) chineseMonthDayPoint{
+    NSDate *now = [NSDate date];
+    NSDateComponents *localeComp = [self.chineseCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:now];
+
+    NSInteger month = localeComp.month;
+    NSInteger day = (localeComp.day==0? 30: localeComp.day);
+    NSInteger nowPoint = [self getMonthDayPoint:[NSString stringWithFormat:@"%li-%li", month, day]];
+    
+    return nowPoint;
+}
+
+// 返回公历上，今天的point
+-(NSInteger) gregorianMonthDayPoint{
+    NSDate *now = [NSDate date];
+    
+    NSArray *nowArr = [[self dataToString:now] componentsSeparatedByString:@"-"];
+    NSInteger nowPoint = [self getMonthDayPoint:[NSString stringWithFormat:@"%@-%@", nowArr[1], nowArr[2]]];
+    
+    return nowPoint;
+}
 
 @end

@@ -16,8 +16,10 @@
 #import "CJTipView.h"
 
 #import "CJCoreDataManage.h"
-#import "Event.h"
 #import "CJUseTime.h"
+
+#import "Event.h"
+#import "CJFestival.h"
 
 #define onlyValue 78
 
@@ -116,36 +118,52 @@
     
     tipView.backgroundColor = CJHeaderColor;
 
-//------------------------
-    CJCoreDataManage *dateManage = [CJCoreDataManage sharedInstance];
-    NSManagedObjectContext *content = [dateManage managedObjectContext];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:content];
-    
-    [request setEntity:entity];
-    
-    // 排序
-    NSSortDescriptor *sortDescriptor =
-    [NSSortDescriptor sortDescriptorWithKey:@"datetime"
-                                  ascending:YES
-                                   selector:@selector(localizedCaseInsensitiveCompare:)];
-    request.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    
-    //查询条件
-    NSTimeInterval today = [self.usetime.getTodayYYmmhh timeIntervalSince1970];
+    NSArray *chineseFest = [CJFestival festivalListWithCalendar:@"chineseCalendar"];
+    NSArray *gregorianFest = [CJFestival festivalListWithCalendar:@"gregorianCalendar"];
 
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"datetime>=%f", today];
-    [request setPredicate:predicate];
+    NSInteger chinesePoint = [self.usetime chineseMonthDayPoint];
+    NSInteger gregorianPoint = [self.usetime gregorianMonthDayPoint];
     
-    NSError *error;
-    Event *firstData = [[content executeFetchRequest:request error:&error] firstObject];
+    NSInteger tmp = INT16_MAX;
+
+    CJFestival *nextFestival;
+
+    for (CJFestival *festival in gregorianFest) {
+        NSInteger datetimePoint = [self.usetime getMonthDayPoint:festival.datetime];
+       
+        if (datetimePoint >= gregorianPoint) {
+            if (tmp > datetimePoint) {
+                tmp = datetimePoint - gregorianPoint;
+                nextFestival = festival;
+            }
+        }
+    }
+    
+    for (CJFestival *festival in chineseFest) {
+        NSInteger datetimePoint = [self.usetime getMonthDayPoint:festival.datetime];
+
+        if (datetimePoint >= chinesePoint) {
+            if (tmp > datetimePoint) {
+                tmp = datetimePoint - chinesePoint;
+                nextFestival = festival;
+            }
+        }
+    }
+    
+    
+    if (tmp==INT16_MAX) {
+        
+    }
+    
+    
+//------------------------
+    
     
 //-------------------------------
-    NSInteger seconds = ([firstData.datetime integerValue]- today)/(60 * 60 * 24);
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[firstData.datetime integerValue]];
+//    NSInteger seconds = ([firstData.datetime integerValue]- today)/(60 * 60 * 24);
+//    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[firstData.datetime integerValue]];
     
-    [tipView setTipForTitle:firstData.name time:[self.usetime dataToString:date] dayNumber:[NSString stringWithFormat:@"%li", seconds]];
+    [tipView setTipForTitle:nextFestival.event time:nextFestival.datetime dayNumber:[NSString stringWithFormat:@"%li", tmp]];
     
     [self.view addSubview:tipView];
     

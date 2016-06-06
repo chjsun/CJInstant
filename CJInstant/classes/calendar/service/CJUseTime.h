@@ -58,6 +58,19 @@
 - (NSDate *) strToDate:(NSString *)dateStr;
 // 日期转字符串
 - (NSString *) dataToString:(NSDate *)date;
+// ----------------- this app new add ----------------------
 // 今天的00:00:00时间
 -(NSDate *)getTodayYYmmhh;
+/**
+ *  根据月日返回对应的大小
+ *
+ *  @param monthDay @"xx-xx"
+ *
+ *  @return 1 or 2 or ... or 363
+ */
+-(NSInteger)getMonthDayPoint:(NSString *)monthDay;
+
+-(NSInteger) chineseMonthDayPoint;
+
+-(NSInteger) gregorianMonthDayPoint;
 @end
