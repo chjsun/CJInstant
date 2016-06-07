@@ -5,4 +5,14 @@
 #### 已发生的事情是显示已过xx天，一般是提醒自己什么纪念日
 
 具体演示
-![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/show.gif)
+整体概览
+![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/index.gif)
+添加
+![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/add.gif)
+添加时修正
+![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/add%20fix.gif)
+修改
+![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/update.gif)
+删除
+![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/delete.gif)
+
