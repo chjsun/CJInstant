@@ -596,5 +596,11 @@
 		<key>event</key>
 		<string>圣诞节</string>
 	</dict>
+	<dict>
+		<key>datetime</key>
+		<string>12-31</string>
+		<key>event</key>
+		<string>年终</string>
+	</dict>
 </array>
 </plist>

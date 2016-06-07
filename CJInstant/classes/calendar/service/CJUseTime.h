@@ -68,7 +68,9 @@
  *
  *  @return 1 or 2 or ... or 363
  */
--(NSInteger)getMonthDayPoint:(NSString *)monthDay;
+-(NSInteger)getMonthDayNowGregorainPoint:(NSString *)monthDay;
+
+-(NSInteger)getMonthDayNowChinesePoint:(NSString *)monthDay;
 
 -(NSInteger) chineseMonthDayPoint;
 

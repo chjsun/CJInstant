@@ -118,6 +118,7 @@
     
     tipView.backgroundColor = CJHeaderColor;
 
+    // --------------- set next festival -------------
     NSArray *chineseFest = [CJFestival festivalListWithCalendar:@"chineseCalendar"];
     NSArray *gregorianFest = [CJFestival festivalListWithCalendar:@"gregorianCalendar"];
 
@@ -129,39 +130,42 @@
     CJFestival *nextFestival;
 
     for (CJFestival *festival in gregorianFest) {
-        NSInteger datetimePoint = [self.usetime getMonthDayPoint:festival.datetime];
+        NSInteger datetimePoint = [self.usetime getMonthDayNowGregorainPoint:festival.datetime];
         if (datetimePoint >= gregorianPoint) {
-            if (tmp > datetimePoint) {
+            if (tmp > (datetimePoint - gregorianPoint)) {
                 tmp = datetimePoint - gregorianPoint;
                 nextFestival = festival;
             }
         }
     }
     
+    NSInteger nowPoint = [self.usetime getMonthDayNowGregorainPoint:nextFestival.datetime];
+    NSArray *special = [self.usetime specialFestivalPoint:nowPoint];
+    if (special) {
+        nextFestival = [[CJFestival alloc] init];
+        nextFestival.event = special[0];
+        nextFestival.datetime = special[1];
+        tmp = [special[2] integerValue];
+    }
+
+    
     for (CJFestival *festival in chineseFest) {
-        NSInteger datetimePoint = [self.usetime getMonthDayPoint:festival.datetime];
+        NSInteger datetimePoint = [self.usetime getMonthDayNowChinesePoint:festival.datetime];
 
         if (datetimePoint >= chinesePoint) {
-            if (tmp > datetimePoint) {
+            if (tmp > (datetimePoint - gregorianPoint)) {
                 tmp = datetimePoint - chinesePoint;
                 nextFestival = festival;
             }
         }
     }
     
-    if (tmp==INT64_MAX) {
-        // 大年初一。继续完善
-    }
-    NSInteger nowPoint = [self.usetime getMonthDayPoint:nextFestival.datetime];
-    NSArray *special = [self.usetime specialFestivalPoint:nowPoint];
-    if (special) {
-        [tipView setTipForTitle:special[0] time:special[1] dayNumber:special[2]];
-    }else{
-        NSArray *nextTime = [nextFestival.datetime componentsSeparatedByString:@"-"];
-        [tipView setTipForTitle:nextFestival.event time:[NSString stringWithFormat:@"%@ 月 %@", nextTime[0], nextTime[1]] dayNumber:[NSString stringWithFormat:@"%li", tmp]];
-    }
     
+    NSArray *nextTime = [nextFestival.datetime componentsSeparatedByString:@"-"];
+    [tipView setTipForTitle:nextFestival.event time:[NSString stringWithFormat:@"%@ 月 %@", nextTime[0], nextTime[1]] dayNumber:[NSString stringWithFormat:@"%li", tmp/3600/24]];
+// --------------------- end ------------------------
     
+
     [self.view addSubview:tipView];
     
 }

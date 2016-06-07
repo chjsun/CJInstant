@@ -244,7 +244,7 @@
 }
 
 // 根据月日返回对应的大小
--(NSInteger)getMonthDayPoint:(NSString *)monthDay{
+-(NSInteger)getMonthDayNowGregorainPoint:(NSString *)monthDay{
     NSDate *date = [NSDate date];
     
     NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
@@ -255,14 +255,26 @@
 
 }
 
+-(NSInteger)getMonthDayNowChinesePoint:(NSString *)monthDay{
+    NSDate *date = [NSDate date];
+    
+    NSString *year = [[self dataToString:date] componentsSeparatedByString:@"-"][0];
+    
+    NSDate *now = [self strToDate:[NSString stringWithFormat:@"%@-%@", year, monthDay]];
+    NSTimeInterval monthDayPoint = [now timeIntervalSince1970];
+    return monthDayPoint;
+    
+}
+
+
 // 返回农历上，今天的point
 -(NSInteger) chineseMonthDayPoint{
     NSDate *now = [NSDate date];
-    NSDateComponents *localeComp = [self.chineseCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:now];
+    NSDateComponents *localeComp = [self.chineseCalendar components: NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:now];
 
     NSInteger month = localeComp.month;
     NSInteger day = (localeComp.day==0? 30: localeComp.day);
-    NSInteger nowPoint = [self getMonthDayPoint:[NSString stringWithFormat:@"%li-%li", month, day]];
+    NSInteger nowPoint = [self getMonthDayNowChinesePoint:[NSString stringWithFormat:@"%li-%li", month, day]];
     
     return nowPoint;
 }
@@ -272,7 +284,7 @@
     NSDate *now = [NSDate date];
     
     NSArray *nowArr = [[self dataToString:now] componentsSeparatedByString:@"-"];
-    NSInteger nowPoint = [self getMonthDayPoint:[NSString stringWithFormat:@"%@-%@", nowArr[1], nowArr[2]]];
+    NSInteger nowPoint = [self getMonthDayNowGregorainPoint:[NSString stringWithFormat:@"%@-%@", nowArr[1], nowArr[2]]];
     
     return nowPoint;
 }
@@ -316,20 +328,20 @@
     NSInteger now = [self gregorianMonthDayPoint];
     if (mom > now && mom<nextFestivalPoint) {
         
-        NSInteger nextDay = (mom - now) / 3600 / 24;
+        NSInteger nextDay = (mom - now);
         return @[@"母亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:mom]], [NSNumber numberWithInteger:nextDay]];
     }
     NSInteger dad = [self momFestivalPoint];
     if (dad > now && dad<nextFestivalPoint) {
         
-        NSInteger nextDay = (dad - now) / 3600 / 24;
+        NSInteger nextDay = (dad - now);
         return @[@"父亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:dad]], [NSNumber numberWithInteger:nextDay]];
     }
     NSInteger thanksful = [self momFestivalPoint];
     if (thanksful > now && thanksful<nextFestivalPoint) {
         
-        NSInteger nextDay = (thanksful - now) / 3600 / 24;
-        return @[@"母亲节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:thanksful]], [NSNumber numberWithInteger:nextDay]];
+        NSInteger nextDay = (thanksful - now);
+        return @[@"g感恩节", [self dataToString:[NSDate dateWithTimeIntervalSince1970:thanksful]], [NSNumber numberWithInteger:nextDay]];
     }
     
     return nil;
