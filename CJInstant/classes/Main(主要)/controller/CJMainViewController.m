@@ -57,8 +57,6 @@
     
     [self setUpNavitation];
     
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSLog(@"%@", path);
 }
 
 #pragma mark - 设置头部导航栏
