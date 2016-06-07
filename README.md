@@ -12,13 +12,22 @@
 具体演示
 
 整体概览
+
 ![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/index.gif)
-添加
+
+### 添加
+
 ![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/add.gif)
-添加时修正
+
+### 添加时修正
+
 ![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/add%20fix.gif)
-修改
+
+### 修改
+
 ![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/update.gif)
-删除
+
+### 删除
+
 ![image](https://github.com/chjsun/readmeImage/blob/master/CJInstant/delete.gif)
 
