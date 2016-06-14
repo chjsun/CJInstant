@@ -29,7 +29,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *eventStateButton;
 @property (weak, nonatomic) IBOutlet UIButton *detailStateButton;
-
+@property (strong, nonatomic) IBOutlet UIView *rootView;
 /** 选择颜色 */
 @property (nonatomic, strong) UIView *colorPlate;
 
@@ -107,6 +107,9 @@
         self.colorButton.backgroundColor = self.dictColor[self.cjcell.color];
     }
     
+    
+    UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKey)];
+    [self.rootView addGestureRecognizer:tapGest];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,8 +143,9 @@
 }
 
 
--(void) changeColor{
-    
+-(void)closeKey{
+
+    [self.view endEditing:YES];
 }
 
 

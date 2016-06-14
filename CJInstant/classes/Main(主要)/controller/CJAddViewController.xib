@@ -15,7 +15,8 @@
                 <outlet property="detailStateButton" destination="pZJ-2Q-Toc" id="Lc3-4W-C6R"/>
                 <outlet property="detailTextLabel" destination="p5G-5G-vho" id="pNR-IS-RY6"/>
                 <outlet property="eventStateButton" destination="l1P-In-J1R" id="vCb-dT-HBP"/>
-                <outlet property="eventTextLabel" destination="jgL-wa-bB3" id="Uxs-Oa-1KQ"/>
+                <outlet property="eventTextLabel" destination="jgL-wa-bB3" id="2Mt-q8-Jg7"/>
+                <outlet property="rootView" destination="i5M-Pr-FkT" id="QhC-d6-rIO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="xTZ-Dx-Prd"/>
             </connections>
         </placeholder>
