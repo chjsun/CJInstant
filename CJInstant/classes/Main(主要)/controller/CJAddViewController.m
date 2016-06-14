@@ -251,9 +251,4 @@
     [self.colorButton setTitle:name forState:UIControlStateNormal];
 }
 
--(void)dealloc{
-    NSLog(@"addcontroller dealloc___%s", __func__);
-}
-
-
 @end
