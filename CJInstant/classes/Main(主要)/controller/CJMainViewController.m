@@ -151,14 +151,13 @@
         NSInteger datetimePoint = [self.usetime getMonthDayNowChinesePoint:festival.datetime];
 
         if (datetimePoint >= chinesePoint) {
-            if (tmp > (datetimePoint - gregorianPoint)) {
+            if (tmp > (datetimePoint - chinesePoint)) {
                 tmp = datetimePoint - chinesePoint;
                 nextFestival = festival;
             }
         }
     }
-    
-    
+
     NSArray *nextTime = [nextFestival.datetime componentsSeparatedByString:@"-"];
     [tipView setTipForTitle:nextFestival.event time:[NSString stringWithFormat:@"%@ 月 %@", nextTime[0], nextTime[1]] dayNumber:[NSString stringWithFormat:@"%li", tmp/3600/24]];
 // --------------------- end ------------------------
