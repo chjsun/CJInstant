@@ -270,7 +270,7 @@
 // 返回农历上，今天的point
 -(NSInteger) chineseMonthDayPoint{
     NSDate *now = [NSDate date];
-    NSDateComponents *localeComp = [self.chineseCalendar components: NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:now];
+    NSDateComponents *localeComp = [self.gregorianCalendar components: NSCalendarUnitMonth |  NSCalendarUnitDay fromDate:now];
 
     NSInteger month = localeComp.month;
     NSInteger day = (localeComp.day==0? 30: localeComp.day);
